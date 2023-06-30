@@ -1,7 +1,5 @@
 package me.zahara.fmc
-
-
-type DependentMapT[F[_]] = [C] =>> DependentMap[C, F]
+package collection
 
 trait DependentMap[C, F[_]]:
   def withValue[T](collection : C, key : F[T], value : T) : C

@@ -1,16 +1,20 @@
 package me.zahara.fmc
 package collection
 
-case class TypeErasureDepandentMap[F[_]] private (values : Map[Any, Any])
+case class TypeErasureDependentMap[F[_]] private(values : Map[Any, Any])
 
-object TypeErasureDepandentMap:
-  given isDependentMap[F[_]] : DependentMap[TypeErasureDepandentMap[F], F] with
-    override def valueOf[T](collection: TypeErasureDepandentMap[F], key: F[T]): Option[T] =
+object TypeErasureDependentMap:
+  def empty[F[_]] : TypeErasureDependentMap[F] =
+    TypeErasureDependentMap(Map())
+  end empty
+  
+  given isDependentMap[F[_]] : DependentMap[TypeErasureDependentMap[F], F] with
+    override def valueOf[T](collection: TypeErasureDependentMap[F], key: F[T]): Option[T] =
       collection.values.get(key).map(_.asInstanceOf)
     end valueOf
 
-    override def withValue[T](collection: TypeErasureDepandentMap[F], key: F[T], value: T): TypeErasureDepandentMap[F] =
-      new TypeErasureDepandentMap(collection.values + (key -> value))
+    override def withValue[T](collection: TypeErasureDependentMap[F], key: F[T], value: T): TypeErasureDependentMap[F] =
+      new TypeErasureDependentMap(collection.values + (key -> value))
     end withValue
   end isDependentMap
-end TypeErasureDepandentMap
+end TypeErasureDependentMap

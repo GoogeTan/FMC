@@ -4,27 +4,120 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="" />
+    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/block/PropertiesOfBlock.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/block/material/Material.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/block/material/PushReaction.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/BlockPos.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/BlockPos.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Color.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Color.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Direction.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Direction.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ResourceLocation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ResourceLocation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Block.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockSettings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockSettings.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/ExampleBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Material.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Property.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/level/Properties.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/level/Property.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/level/SetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/SetBlock.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/all.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/all.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/bimap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/bimap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/cats.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/cats.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/iron.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/iron.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/level.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/level.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Package Object" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2RnJvGacIUww1wiXdUJEvU4Lkvg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FMC\src\main\scala\block" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="me.zahara.fmc" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Scala REPL" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="FMC" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="javaOptions" value="-Djline.terminal=NONE" />
+      <option name="myConsoleArgs" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Scala REPL.Scala REPL" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -35,5 +128,19 @@
       <updated>1687880143940</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

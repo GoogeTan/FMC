@@ -7,3 +7,6 @@ lazy val root = (project in file("."))
     name := "FMC",
     idePackagePrefix := Some("me.zahara.fmc")
   )
+libraryDependencies += "org.typelevel" %% "cats-core" % "2.9.0"
+libraryDependencies += "io.github.iltotore" %% "iron" % "2.0.0"
+scalacOptions += "-Ykind-projector:underscores"

@@ -1,3 +1,6 @@
 package me.zahara.fmc
+package block
 
-case class BlockSettings()
+import block.material.Material
+
+case class BlockSettings(meterial : Material)

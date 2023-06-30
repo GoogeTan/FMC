@@ -1,5 +1,9 @@
-package me.zahara.fmc.level
+package me.zahara.fmc
+package level
 
-trait GetBlock {
+import block.Properties
 
-}
+trait GetBlock[F[_], Level]:
+  def blockPropertiesAt(level : Level, pos : BlockPos) : F[Properties]
+  def blockAt(level: Level, pos: BlockPos) : F[ResourceLocation]
+end GetBlock

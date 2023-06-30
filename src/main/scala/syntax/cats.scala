@@ -1,5 +1,6 @@
-package me.zahara.fmc.syntax
+package me.zahara.fmc
+package syntax
 
-object cats {
-
-}
+object cats:
+  export  _root_.cats.syntax.all.{*, given}
+end cats

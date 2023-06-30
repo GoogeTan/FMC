@@ -1,4 +1,5 @@
 package me.zahara.fmc
+package collection
 
 trait BiMap[C, K, V]:
   def keyOf(collection : C, value : V) : Option[K]

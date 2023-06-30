@@ -1,5 +1,4 @@
 package me.zahara.fmc
-package level
 
 enum Direction:
   case East
