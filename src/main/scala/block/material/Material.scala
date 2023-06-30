@@ -11,5 +11,5 @@ case class Material(
                       solid: Boolean = true,
                       color: Option[Color] = None,
                       solidBlocking: Boolean = true,
-                   )
+                  )
 

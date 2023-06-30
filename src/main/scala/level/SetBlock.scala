@@ -1,7 +1,7 @@
 package me.zahara.fmc
 package level
 
-import block.{Properties, Property}
+import block.{BlockState, Properties, Property}
 
 /**
  * Для данного типа уровня Level позволяет обновлять проперти блоков в мире, устанавливать блоки в мир.
@@ -9,8 +9,8 @@ import block.{Properties, Property}
  * @tparam Level Мир
  */
 trait SetBlock[F[_], Level]:
-  def updateBlockAt(level: Level, pos: BlockPos, resourceLocation: ResourceLocation): F[Unit]
-
-  def updateBlockAt(level: Level, pos: BlockPos, resourceLocation: ResourceLocation, properties: Properties): F[Unit]
+  extension (level : Level)
+    def updateBlockAt(position: BlockPos, withNewState: BlockState): F[Unit]
+  end extension
 end SetBlock
 

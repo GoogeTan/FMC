@@ -6,4 +6,6 @@ object all:
   export dependendmap.{*, given}
   export cats.{*, given}
   export iron.{*, given}
+  export block.{*, given}
+  export level.{*, given}
 end all

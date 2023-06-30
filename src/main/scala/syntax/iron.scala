@@ -11,5 +11,6 @@ object iron:
   export io.github.iltotore.iron.refineOption
   export io.github.iltotore.iron.compileTime.{*,given}
   export io.github.iltotore.iron.constraint.all.{*, given}
+  export io.github.iltotore.iron.:|
 end iron
   

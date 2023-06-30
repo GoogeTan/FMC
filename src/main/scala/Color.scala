@@ -1,8 +1,7 @@
 package me.zahara.fmc
 
-import io.github.iltotore.iron.:|
-import io.github.iltotore.iron.constraint.all.*
-import io.github.iltotore.iron.constraint.numeric.Interval.ClosedOpen
+import syntax.iron.{*, given}
+
 
 opaque type Color = Int
 
