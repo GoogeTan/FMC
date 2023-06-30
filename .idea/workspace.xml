@@ -4,41 +4,214 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/block/PropertiesOfBlock.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/block/material/Material.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/block/material/PushReaction.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/BlockPos.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/BlockPos.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Color.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Color.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Direction.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Direction.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/ResourceLocation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/ResourceLocation.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Block.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockSettings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockSettings.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/ExampleBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Material.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Property.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/Properties.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/Property.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/SetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/SetBlock.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/all.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/all.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/bimap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/bimap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/cats.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/cats.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/iron.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/iron.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/level.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/level.scala" afterDir="false" />
+    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="add directories to git ignore">
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/BlockPos.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/Color.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/Direction.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/ResourceLocation.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/BlockPrototype.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/BlockSettings.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/BlockState.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/Properties.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/PropertiesOfBlock.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/Property.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/material/Material.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/block/material/PushReaction.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/collection/BiMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/collection/DependentMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/collection/ListBiMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/collection/TypeErasureDependentMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/level/GetBlock.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/level/PropertiesAtPos.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/level/SetBlock.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/syntax/all.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/syntax/bimap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/syntax/cats.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/syntax/dependendmap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/syntax/iron.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/META-INF/semanticdb/src/main/scala/syntax/level.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/BlockPos$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/BlockPos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/BlockPos.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/Color$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/Color$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/Color$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/Direction$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/Direction$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/Direction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/Direction.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/ResourceLocation$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/ResourceLocation$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/ResourceLocation$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/ResourceLocation$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/ResourceLocation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/ResourceLocation.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockPrototype$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockPrototype.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockPrototype.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockSettings$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockSettings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockSettings.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/BlockState.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/Properties$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/Properties$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/Properties$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/PropertiesOfBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/PropertiesOfBlock.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/Property$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/Property.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/Property.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/material/Material$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/material/Material.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/material/Material.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/material/PushReaction$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/material/PushReaction$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/material/PushReaction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/block/material/PushReaction.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/BiMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/BiMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/DependentMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/DependentMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/ListBiMap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/ListBiMap$given_lbim.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/ListBiMap$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/ListBiMap$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/ListBiMap$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/ListBiMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/ListBiMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/TypeErasureDependentMap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/TypeErasureDependentMap$isDependentMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/TypeErasureDependentMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/collection/TypeErasureDependentMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/level/GetBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/level/GetBlock.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/level/PropertiesAtPos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/level/PropertiesAtPos.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/level/SetBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/level/SetBlock.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/all$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/all.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/all.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/bimap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/bimap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/bimap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/cats$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/cats.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/cats.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/dependendmap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/dependendmap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/dependendmap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/iron$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/iron.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/iron.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/level$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/level.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-bsp-clients-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==/me/zahara/fmc/syntax/level.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/BlockPos.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/Color.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/Direction.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/ResourceLocation.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/BlockPrototype.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/BlockSettings.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/BlockState.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/Properties.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/PropertiesOfBlock.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/Property.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/material/Material.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/block/material/PushReaction.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/collection/BiMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/collection/DependentMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/collection/ListBiMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/collection/TypeErasureDependentMap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/level/GetBlock.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/level/PropertiesAtPos.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/level/SetBlock.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/syntax/all.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/syntax/bimap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/syntax/cats.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/syntax/dependendmap.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/syntax/iron.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/META-INF/semanticdb/src/main/scala/syntax/level.scala.semanticdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/BlockPos$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/BlockPos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/BlockPos.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/Color$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/Color$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/Color$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/Direction$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/Direction$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/Direction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/Direction.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/ResourceLocation$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/ResourceLocation$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/ResourceLocation$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/ResourceLocation$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/ResourceLocation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/ResourceLocation.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockPrototype$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockPrototype.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockPrototype.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockSettings$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockSettings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockSettings.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockState.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/BlockState.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/Properties$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/Properties$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/Properties$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/PropertiesOfBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/PropertiesOfBlock.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/Property$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/Property.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/Property.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/material/Material$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/material/Material.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/material/Material.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/material/PushReaction$$anon$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/material/PushReaction$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/material/PushReaction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/block/material/PushReaction.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/BiMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/BiMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/DependentMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/DependentMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/ListBiMap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/ListBiMap$given_lbim.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/ListBiMap$package$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/ListBiMap$package.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/ListBiMap$package.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/ListBiMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/ListBiMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/TypeErasureDependentMap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/TypeErasureDependentMap$isDependentMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/TypeErasureDependentMap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/collection/TypeErasureDependentMap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/level/GetBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/level/GetBlock.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/level/PropertiesAtPos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/level/PropertiesAtPos.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/level/SetBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/level/SetBlock.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/all$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/all.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/all.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/bimap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/bimap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/bimap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/cats$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/cats.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/cats.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/dependendmap$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/dependendmap.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/dependendmap.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/iron$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/iron.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/iron.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/level$.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/level.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/bloop-internal-classes/classes-Metals-WDMCahuURFmvmn2sjifTxQ==-ypxM9PxuRjGUchlAeO8hJg==/me/zahara/fmc/syntax/level.tasty" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.bloop/root/root-analysis.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,17 +251,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\FMC\src\main\scala\block" />
@@ -127,6 +300,23 @@
       <option name="presentableId" value="Default" />
       <updated>1687880143940</updated>
     </task>
+    <task id="LOCAL-00001" summary="a">
+      <option name="closed" value="true" />
+      <created>1688119340718</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688119340718</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add directories to git ignore">
+      <option name="closed" value="true" />
+      <created>1688119395560</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688119395560</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,5 +332,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="a" />
+    <MESSAGE value="add directories to git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add directories to git ignore" />
   </component>
 </project>
