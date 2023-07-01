@@ -1,7 +1,7 @@
 package me.zahara.fmc
 package collection
 
-case class TypeErasureDependentMap[F[_]] private(values : Map[Any, Any])
+case class TypeErasureDependentMap[F[_]] private(private val values : Map[Any, Any])
 
 object TypeErasureDependentMap:
   def empty[F[_]] : TypeErasureDependentMap[F] =
