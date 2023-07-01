@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/ArmorMaterial.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/ArmorSlot.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/EquipmentSlot.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/HandSlot.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/ItemPrototype.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/ItemType.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/Rarity.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/ToolType.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/registry/Registrable.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/text/ChatFormatting.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="a lot of stuff">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/item/CreativeModeTab.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/text/Component.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/text/Translate.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/Color.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Color.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Property.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Property.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/example/ExampleBlock.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/level.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/level.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/item/ItemPrototype.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/item/ItemPrototype.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/registry/Registrable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/registry/Registrable.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +76,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FMC\src\main\scala\text" />
       <recent name="D:\FMC\src\main\scala\block" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -141,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688119395560</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="a lot of stuff">
+      <option name="closed" value="true" />
+      <created>1688197298331</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688197298331</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +155,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="a" />
     <MESSAGE value="add directories to git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add directories to git ignore" />
+    <MESSAGE value="a lot of stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="a lot of stuff" />
   </component>
 </project>

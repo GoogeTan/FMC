@@ -16,4 +16,6 @@ end Registrable
  * @param resourceLocation имя объекута
  * @param value            значение
  */
-def register[F[_], T](resourceLocation: ResourceLocation, value : T)(using reg : Registrable[F, T]) : F[Unit] = reg.register(resourceLocation, value)
+def register[F[_], T](resourceLocation: ResourceLocation, value : T)(using reg : Registrable[F, T]) : F[Unit] =
+  reg.register(resourceLocation, value)
+end register
