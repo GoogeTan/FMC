@@ -14,12 +14,5 @@ final case class BlockPrototype[F[_], Level](
   settings: BlockSettings,
   defaultProperties : Properties,
   neighborUpdatedReaction : (self : Block, level : Level, pos : BlockPos, from : BlockPos) => F[Unit],
-  stateForPlacement : (self : Block, level : Level, pos : BlockPos) => F[Properties]
-)
-
-def defaultBlock[Level, F[_] : Applicative : PropertiesOfBlock] = BlockPrototype(
-  settings = BlockSettings(Material()),
-  defaultProperties = noProperties,
-  neighborUpdatedReaction = { (self : Block, level : Level, pos : BlockPos, from : BlockPos) => ().pure },
-  stateForPlacement = { (self : Block, level : Level, pos : BlockPos) => self.defaultProperties }
+  stateForPlacement : (self : Block, level : Level, pos : BlockPos) => F[BlockState]
 )

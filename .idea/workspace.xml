@@ -4,13 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="a lot of stuff">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/item/CreativeModeTab.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/text/Component.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/text/Translate.scala" afterDir="false" />
+    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="more items">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/Mod.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/Dependent.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/DependentPair.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/Sigma.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/item/ItemPrototype.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/item/ItemPrototype.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/registry/Registrable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/registry/Registrable.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.bloop/fmc-build.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/.bloop/fmc-build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Property.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Property.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +36,34 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="fmc" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="fmc" type="f1a62948:ProjectNode" />
+                <item name="fmc" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="fmc" type="f1a62948:ProjectNode" />
+                <item name="fmc" type="2d1252cf:ModuleNode" />
+                <item name="sbt tasks" type="d9357504:SbtViewContributor$SbtTasksGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -69,7 +109,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
@@ -83,12 +125,54 @@
       <recent name="me.zahara.fmc" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="sbt Task.Unnamed (1)">
+    <configuration name="Unnamed (1)" type="SbtRunConfiguration" factoryName="sbt Task" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="tasks" value="package -explain" />
+      <option name="useSbtShell" value="true" />
+      <option name="vmparams" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="SbtRunConfiguration" factoryName="sbt Task" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="tasks" value="package" />
+      <option name="useSbtShell" value="true" />
+      <option name="vmparams" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hrelp" type="SbtRunConfiguration" factoryName="sbt Task" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="tasks" value="help" />
+      <option name="useSbtShell" value="true" />
+      <option name="vmparams" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scala REPL" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <module name="FMC" />
       <option name="allowRunningInParallel" value="false" />
       <option name="javaOptions" value="-Djline.terminal=NONE" />
-      <option name="myConsoleArgs" value="" />
+      <option name="myConsoleArgs" value="-usejavacp" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -98,6 +182,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="sbt Task.Unnamed (1)" />
+      <item itemvalue="sbt Task.Unnamed" />
+      <item itemvalue="sbt Task.hrelp" />
+      <item itemvalue="Scala REPL.Scala REPL" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Scala REPL.Scala REPL" />
@@ -137,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688197298331</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="more items">
+      <option name="closed" value="true" />
+      <created>1688240756522</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688240756522</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +254,7 @@
     <MESSAGE value="a" />
     <MESSAGE value="add directories to git ignore" />
     <MESSAGE value="a lot of stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="a lot of stuff" />
+    <MESSAGE value="more items" />
+    <option name="LAST_COMMIT_MESSAGE" value="more items" />
   </component>
 </project>

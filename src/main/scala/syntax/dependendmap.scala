@@ -1,16 +1,18 @@
 package me.zahara.fmc
 package syntax
 
-import collection.DependentMap
+import collection.{Dependent, DependentMap}
 
 object dependendmap:
-  extension [C](collection : C)
-    def withValue[F[_], T](key: F[T], value: T)(using dm : DependentMap[C, F]): C =
-      dm.withValue(collection, key, value)
+  export collection.TypeErasureDependentMap.isDependentMap
+  
+  extension [C, D <: Dependent](collection : C)
+    def withValue(key: D)(value: key.Value)(using dm : DependentMap[C, D]): C =
+      dm.withValue(collection, key)(value)
     end withValue
   
   
-    def valueOf[F[_], T](key: F[T])(using dm : DependentMap[C, F]): Option[T] =
+    def valueOf(key: D)(using dm : DependentMap[C, D]): Option[key.Value] =
       dm.valueOf(collection, key)
     end valueOf
   end extension

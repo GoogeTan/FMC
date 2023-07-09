@@ -1,8 +1,8 @@
 package me.zahara.fmc
 package collection
 
-trait DependentMap[C, F[_]]:
-  def withValue[T](collection : C, key : F[T], value : T) : C
+trait DependentMap[C, D <: Dependent]:
+  def withValue(collection : C, key : D)(value : key.Value) : C
 
-  def valueOf[T](collection : C, key : F[T]) : Option[T]
+  def valueOf(collection : C, key : D) : Option[key.Value]
 end DependentMap
