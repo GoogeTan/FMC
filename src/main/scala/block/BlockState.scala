@@ -1,7 +1,7 @@
 package me.zahara.fmc
 package block
 
-import block.actions.PropertiesOfBlock
+import block.action.PropertiesOfBlock
 import collection.ListBiMap
 import syntax.all.{*, given}
 

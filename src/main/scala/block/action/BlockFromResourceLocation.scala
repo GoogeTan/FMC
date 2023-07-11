@@ -1,5 +1,5 @@
 package me.zahara.fmc
-package block.actions
+package block.action
 
 import block.Block
 

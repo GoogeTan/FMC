@@ -1,9 +1,11 @@
 package me.zahara.fmc
 package item
 
+import creative.tab.CreativeModeTab
+
 case class ItemPrototype(
                           itemType : ItemType,
                           isFireResistant: Boolean = false,
-                          craftingRemainingItem : Option[ResourceLocation] = None, // TODO придумать типизировыанные предметы
+                          craftingRemainingItem : Option[Item],
                           creativeTabs : List[CreativeModeTab] = List()
                         )

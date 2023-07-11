@@ -2,7 +2,7 @@ package me.zahara.fmc
 package block
 
 import block.BlockSettings
-import block.actions.PropertiesOfBlock
+import block.action.PropertiesOfBlock
 import block.material.Material
 import syntax.all.{*, given}
 

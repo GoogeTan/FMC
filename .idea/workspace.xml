@@ -4,25 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="more items">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/Mod.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/Dependent.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/DependentPair.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/Sigma.scala" afterDir="false" />
+    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="refactor creative tabs">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/creative/tab/CreativeModeTab.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/creative/tab/CreativeModeTabPrototype.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/creative/tab/action/Tabs.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/creative/tab/action/VanilaTabs.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/item/Item.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/item/stack/Stack.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.bloop/fmc-build.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/.bloop/fmc-build.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Property.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Property.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/BiMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/ListBiMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/actions/BlockFromResourceLocation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/action/BlockFromResourceLocation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/actions/PropertiesOfBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/action/PropertiesOfBlock.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/DependentPair.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/collection/DependentPair.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/item/CreativeModeTab.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/item/ItemPrototype.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/item/ItemPrototype.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,8 +180,8 @@
     </configuration>
     <list>
       <item itemvalue="sbt Task.Unnamed (1)" />
-      <item itemvalue="sbt Task.Unnamed" />
       <item itemvalue="sbt Task.hrelp" />
+      <item itemvalue="sbt Task.Unnamed" />
       <item itemvalue="Scala REPL.Scala REPL" />
     </list>
     <recent_temporary>
@@ -235,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688240756522</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="more items">
+      <option name="closed" value="true" />
+      <created>1688918475299</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688918475299</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +259,7 @@
     <MESSAGE value="add directories to git ignore" />
     <MESSAGE value="a lot of stuff" />
     <MESSAGE value="more items" />
-    <option name="LAST_COMMIT_MESSAGE" value="more items" />
+    <MESSAGE value="refactor creative tabs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor creative tabs" />
   </component>
 </project>
