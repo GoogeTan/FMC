@@ -4,6 +4,7 @@ package item
 import io.github.iltotore.iron.:|
 import io.github.iltotore.iron.constraint.all.Positive
 
+// Добавить типизацию точную
 enum ItemType:
   case Common(
                maxStackSize : Int :| Positive
@@ -15,11 +16,12 @@ enum ItemType:
               isMeat: Boolean = false,
               canAlwaysEat: Boolean = false,
               fastFood: Boolean = false,
-              effects : List[(Nothing, Float)] = List() // Effect and chance. TODO
+              effects : List[(Nothing, Float)] = List() // TODO Добавить эффект и его шанс
            )
   case Tool(
              toolType: ToolType,
-             maxDamage : Int
+             maxDamage : Int :| Positive,
+             material: ToolMaterial
            )
   case Armor(
               slot: ArmorSlot,
@@ -27,6 +29,6 @@ enum ItemType:
               defense: Int = 0,
               toughness: Float = 0,
               knockbackResistance: Float = 0,
-              maxDamage : Int
+              maxDamage : Int :| Positive
             )
 end ItemType
