@@ -1,4 +1,5 @@
 package me.zahara.fmc
+package action
 
 import cats.Show
 
