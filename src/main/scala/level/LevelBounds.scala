@@ -6,7 +6,7 @@ import cats.syntax.all.{*, given}
 import io.github.iltotore.iron.:|
 import io.github.iltotore.iron.constraint.numeric.{Multiple, Positive}
 
-trait LevelBounds[F[_], Level]:
+trait LevelBounds[F[_]]:
   extension (level : Level)
     def height: F[Int :| Positive & Multiple[16]] // Может тут ограничение на делимость на 16 лишнее
     def minY: F[Int]

@@ -1,8 +1,9 @@
 package me.zahara.fmc
 package text
 
-import cats.{Applicative, Foldable, Monoid}
 import syntax.cats.{*, given}
+
+import cats.{Applicative, Foldable, Monoid}
 
 enum Component:
   case Text(value : String)

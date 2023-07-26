@@ -29,11 +29,11 @@ case class Properties private[block] (private val values :  TypeErasureDependent
     }
   end foldT
 
-
   def forEachT(func: [T <: Comparable[T]] => (Property[T], T) => Unit): Unit =
     iterator.foreach { pair =>
       func[pair.key.Value](pair.key, pair.value)
     }
+  end forEachT
 end Properties
 
 

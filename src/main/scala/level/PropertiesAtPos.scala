@@ -3,7 +3,7 @@ package level
 
 import block.{Properties, Property}
 
-trait PropertiesAtPos[F[_], Level]:
+trait PropertiesAtPos[F[_]]:
   extension (level : Level)
     /**
      * Обновляет проперти на данных координатах. Если проперти есть у данного блока, возвращает его старое значение, иначе None

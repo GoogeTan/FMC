@@ -10,6 +10,6 @@ enum ToolType:
   case Sword
   case Pickaxe
   case Shovel
-  case How
+  case Hoe
   case MultiTool(types : List[ToolType] :| MinLength[1])
 end ToolType
