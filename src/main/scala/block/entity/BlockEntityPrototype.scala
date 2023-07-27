@@ -3,7 +3,6 @@ package block.entity
 
 import block.entity.action.SharedData
 import block.{BlockState, Properties}
-import collection.{DependentPair, TypeErasureDependentMap}
 import data.*
 import item.stack.Stack
 import level.Level

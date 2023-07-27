@@ -4,25 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="block entity">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/block/entity/action/SharedData.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/level/Level.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/registry/RegistrableBlockEntity.scala" afterDir="false" />
+    <list default="true" id="dd999453-8919-48f3-aaa1-69cffada5f61" name="Changes" comment="a lot of stuff">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/FPair.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/collection/OperationT.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockPrototype.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockSettings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockSettings.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.bloop/fmc-build.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/.bloop/fmc-build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/BlockState.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Properties.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/block/Property.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/Property.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/block/entity/BlockEntityPrototype.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/block/entity/BlockEntityPrototype.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/item/Item.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/item/Item.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/item/ItemType.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/item/ItemType.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/item/ToolMaterial.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/item/ToolMaterial.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/item/ToolType.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/item/ToolType.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/GetBlock.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/LevelBounds.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/LevelBounds.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/PropertiesAtPos.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/level/SetBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/level/SetBlock.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/registry/RegistrableBlock.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/registry/RegistrableBlock.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/text/Component.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/text/Component.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/Dependent.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/DependentMap.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/DependentPair.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/LinkedHashMap.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/collection/TypeErasureDependentMap.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/all.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/syntax/all.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/syntax/dependendmap.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +84,9 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2RnJvGacIUww1wiXdUJEvU4Lkvg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -229,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689258348165</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="a lot of stuff">
+      <option name="closed" value="true" />
+      <created>1690383124303</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690383124303</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,10 +256,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="a" />
     <MESSAGE value="add directories to git ignore" />
-    <MESSAGE value="a lot of stuff" />
     <MESSAGE value="more items" />
     <MESSAGE value="refactor creative tabs" />
     <MESSAGE value="block entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="block entity" />
+    <MESSAGE value="a lot of stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="a lot of stuff" />
   </component>
 </project>

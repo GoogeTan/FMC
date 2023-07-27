@@ -1,41 +1,32 @@
 package me.zahara.fmc
 package block
 
-import collection.TypeErasureDependentMap.asList
-import collection.{DependentPair, TypeErasureDependentMap}
-import syntax.dependendmap.{*, given}
+import collection.FPair
 
-case class Properties private[block] (private val values :  TypeErasureDependentMap[Property[?]]):
+import cats.{Eval, Foldable}
 
-  def valueOf[T <: Comparable[T]](property: Property[T]): Option[T] =
-    values.valueOf(property.asInstanceOf[Property[?]]).map(_.asInstanceOf[T])
+case class Properties private[block] (private val values : Map[Property[?], Any]) extends Iterable[FPair[Property, ?]]:
+
+  def valueOf[T](property: Property[T]): Option[T] =
+    values.get(property).map(_.asInstanceOf)
   end valueOf
 
-  def withValueFor[T <: Comparable[T]](property: Property[T], value: T): Properties =
-    Properties(values.withValue(property.asInstanceOf[Property[?]])(value.asInstanceOf))
+  def withValueFor[T](property: Property[T], value: T): Properties =
+    Properties(values.updated(property, value))
   end withValueFor
 
-  private def iterator : Iterator[DependentPair[Property[?]]] = asList(values).iterator
-
-  def mapT[K](func : [T <: Comparable[T]] => (Property[T], T) => K) : List[K] =
-    iterator.map { pair =>
-      func[pair.key.Value](pair.key, pair.value)
-    }.toList
-  end mapT
-
-  def foldT[B](initial : B)(func : [T <: Comparable[T]] => (B, Property[T], T) => B) : B =
-    iterator.foldRight(initial) { (pair, result) =>
-      func(result, pair.key, pair.value)
-    }
-  end foldT
-
-  def forEachT(func: [T <: Comparable[T]] => (Property[T], T) => Unit): Unit =
-    iterator.foreach { pair =>
-      func[pair.key.Value](pair.key, pair.value)
-    }
-  end forEachT
+  override def iterator : Iterator[FPair[Property, ?]] = values.toList.map((key : Property[?], value : Any) => FPair(key, value.asInstanceOf)).iterator
 end Properties
 
+given Foldable[Iterable] with
+  override def foldLeft[A, B](fa: Iterable[A], b: B)(f: (B, A) => B): B =
+    fa.foldLeft(b)(f)
+  end foldLeft
+
+  override def foldRight[A, B](fa: Iterable[A], lb: Eval[B])(f: (A, Eval[B]) => Eval[B]): Eval[B] =
+    fa.foldRight(lb)(f)
+  end foldRight
+end given
 
 
-def noProperties : Properties = Properties(TypeErasureDependentMap.empty)
+def noProperties : Properties = Properties(Map())
