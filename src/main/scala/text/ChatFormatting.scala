@@ -1,7 +1,9 @@
-package me.zahara.fmc
+package fmc
 package text
 
-import me.zahara.fmc.syntax.iron.{*, given}
+import syntax.iron.{*, given}
+
+import client.*
 
 enum ChatFormatting(
                       name: String,
