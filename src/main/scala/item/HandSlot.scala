@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 package item
 
 enum HandSlot(index : Int, filterFlag : Int, name : String):

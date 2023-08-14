@@ -1,9 +1,8 @@
-package me.zahara.fmc
+package fmc
 package creative.tab
 
+import item.stack.Stack
 import text.Component
-
-import me.zahara.fmc.item.stack.Stack
 
 case class CreativeModeTabPrototype(
                                      displayName: Component,

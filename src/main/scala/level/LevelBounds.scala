@@ -1,21 +1,27 @@
-package me.zahara.fmc
+package fmc
 package level
 
-import cats.Applicative
-import cats.syntax.all.{*, given}
-import io.github.iltotore.iron.:|
-import io.github.iltotore.iron.constraint.numeric.{Multiple, Positive}
+import syntax.all.{*, given}
 
 trait LevelBounds[F[_]]:
-  extension (level : Level)
-    def height: F[Int :| Positive & Multiple[16]] // Может тут ограничение на делимость на 16 лишнее
-    def minY: F[Int]
+  def height(level : Level): F[Int :| Positive]
+  def minY(level : Level): F[Int]
 
-    def maxY(using Applicative[F]): F[Int] =
-      minY.map2(height)(_ + _ - 1)
-    end maxY
+  def maxY(level : Level): F[Int]
 
-    def borderRadius: F[Int :| Positive]
-  end extension
+  def borderRadius(level : Level): F[Int :| Positive]
 end LevelBounds
 
+def height[F[_]](level: Level)(using bounds : LevelBounds[F]): F[Int :| Positive] =
+  bounds.height(level)
+end height
+
+def minY[F[_]](level: Level)(using bounds : LevelBounds[F]): F[Int] =
+  bounds.minY(level)
+end minY
+
+def maxY[F[_]](level: Level)(using bounds : LevelBounds[F]): F[Int] = bounds.maxY(level)
+
+def borderRadius[F[_]](level: Level)(using bounds : LevelBounds[F]): F[Int :| Positive] =
+  bounds.borderRadius(level)
+end borderRadius

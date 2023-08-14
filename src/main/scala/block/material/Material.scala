@@ -1,9 +1,10 @@
-package me.zahara.fmc
+package fmc
 package block.material
 
+import client.Color
 
 case class Material(
-                      pushReaction: PushReaction = PushReaction.NORMAL,
+                      pushReaction: PushReaction = PushReaction.Normal,
                       blocksMotion: Boolean = true,
                       flammable: Boolean = false,
                       liquid: Boolean = false,

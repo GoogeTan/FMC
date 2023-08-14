@@ -1,4 +1,8 @@
-package me.zahara.fmc
+package fmc
 package collection
 
-case class FPair[F[_], T](key : F[T], value : T)
+import typing.Id
+
+type FPair[F[_], T] = FGPair[F, Id, T]
+
+case class FGPair[F[_], G[_], T](key : F[T], value : G[T])

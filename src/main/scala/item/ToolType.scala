@@ -1,8 +1,7 @@
-package me.zahara.fmc
+package fmc
 package item
 
-import io.github.iltotore.iron.:|
-import io.github.iltotore.iron.constraint.all.MinLength
+import syntax.all.{*, given}
 
 enum ToolType:
   case None

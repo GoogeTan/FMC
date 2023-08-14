@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 package creative.tab.action
 
 import creative.tab.CreativeModeTab

@@ -233,11 +233,6 @@
                         {
                             "name": "sbt-bloop",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.6\\sbt-bloop_2.12_1.0-1.5.6.jar"
-                        },
-                        {
-                            "name": "sbt-bloop",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\sbt-bloop_2.12_1.0\\1.5.6\\sbt-bloop_2.12_1.0-1.5.6-sources.jar"
                         }
                     ]
                 },
@@ -250,11 +245,6 @@
                         {
                             "name": "sbt-ide-settings",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jetbrains\\scala\\sbt-ide-settings_2.12_1.0\\1.1.1\\sbt-ide-settings-1.1.1.jar"
-                        },
-                        {
-                            "name": "sbt-ide-settings",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jetbrains\\scala\\sbt-ide-settings_2.12_1.0\\1.1.1\\sbt-ide-settings-1.1.1-sources.jar"
                         }
                     ]
                 },
@@ -267,11 +257,6 @@
                         {
                             "name": "bloop-config_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\1.5.5\\bloop-config_2.12-1.5.5.jar"
-                        },
-                        {
-                            "name": "bloop-config_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\ch\\epfl\\scala\\bloop-config_2.12\\1.5.5\\bloop-config_2.12-1.5.5-sources.jar"
                         }
                     ]
                 },
@@ -284,11 +269,6 @@
                         {
                             "name": "jsoniter-scala-core_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0.jar"
-                        },
-                        {
-                            "name": "jsoniter-scala-core_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\plokhotnyuk\\jsoniter-scala\\jsoniter-scala-core_2.12\\2.4.0\\jsoniter-scala-core_2.12-2.4.0-sources.jar"
                         }
                     ]
                 },
@@ -301,11 +281,6 @@
                         {
                             "name": "scala-library",
                             "path": "C:\\Users\\Googl\\.sbt\\boot\\scala-2.12.18\\lib\\scala-library.jar"
-                        },
-                        {
-                            "name": "scala-library",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.12.18\\scala-library-2.12.18-sources.jar"
                         }
                     ]
                 },
@@ -318,11 +293,6 @@
                         {
                             "name": "sbt",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\sbt\\1.9.1\\sbt-1.9.1.jar"
-                        },
-                        {
-                            "name": "sbt",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\sbt\\1.9.1\\sbt-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -335,11 +305,6 @@
                         {
                             "name": "main_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main_2.12\\1.9.1\\main_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "main_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main_2.12\\1.9.1\\main_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -352,11 +317,6 @@
                         {
                             "name": "io_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\io_2.12\\1.9.1\\io_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "io_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\io_2.12\\1.9.1\\io_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -369,11 +329,6 @@
                         {
                             "name": "logic_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\logic_2.12\\1.9.1\\logic_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "logic_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\logic_2.12\\1.9.1\\logic_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -386,11 +341,6 @@
                         {
                             "name": "actions_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\actions_2.12\\1.9.1\\actions_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "actions_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\actions_2.12\\1.9.1\\actions_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -403,11 +353,6 @@
                         {
                             "name": "main-settings_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main-settings_2.12\\1.9.1\\main-settings_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "main-settings_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\main-settings_2.12\\1.9.1\\main-settings_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -420,11 +365,6 @@
                         {
                             "name": "run_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\run_2.12\\1.9.1\\run_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "run_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\run_2.12\\1.9.1\\run_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -437,11 +377,6 @@
                         {
                             "name": "command_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\command_2.12\\1.9.1\\command_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "command_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\command_2.12\\1.9.1\\command_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -454,11 +389,6 @@
                         {
                             "name": "collections_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\collections_2.12\\1.9.1\\collections_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "collections_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\collections_2.12\\1.9.1\\collections_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -471,11 +401,6 @@
                         {
                             "name": "scripted-plugin_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\scripted-plugin_2.12\\1.9.1\\scripted-plugin_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "scripted-plugin_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\scripted-plugin_2.12\\1.9.1\\scripted-plugin_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -488,11 +413,6 @@
                         {
                             "name": "zinc-lm-integration_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-lm-integration_2.12\\1.9.1\\zinc-lm-integration_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "zinc-lm-integration_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-lm-integration_2.12\\1.9.1\\zinc-lm-integration_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -505,11 +425,6 @@
                         {
                             "name": "util-logging_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-logging_2.12\\1.9.1\\util-logging_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "util-logging_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-logging_2.12\\1.9.1\\util-logging_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -522,11 +437,6 @@
                         {
                             "name": "scala-xml_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.12\\2.1.0\\scala-xml_2.12-2.1.0.jar"
-                        },
-                        {
-                            "name": "scala-xml_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-xml_2.12\\2.1.0\\scala-xml_2.12-2.1.0-sources.jar"
                         }
                     ]
                 },
@@ -539,11 +449,6 @@
                         {
                             "name": "launcher-interface",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\launcher-interface\\1.4.2\\launcher-interface-1.4.2.jar"
-                        },
-                        {
-                            "name": "launcher-interface",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\launcher-interface\\1.4.2\\launcher-interface-1.4.2-sources.jar"
                         }
                     ]
                 },
@@ -556,11 +461,6 @@
                         {
                             "name": "caffeine",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\ben-manes\\caffeine\\caffeine\\2.8.5\\caffeine-2.8.5.jar"
-                        },
-                        {
-                            "name": "caffeine",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\github\\ben-manes\\caffeine\\caffeine\\2.8.5\\caffeine-2.8.5-sources.jar"
                         }
                     ]
                 },
@@ -573,11 +473,6 @@
                         {
                             "name": "lm-coursier-shaded_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\get-coursier\\lm-coursier-shaded_2.12\\2.1.0\\lm-coursier-shaded_2.12-2.1.0.jar"
-                        },
-                        {
-                            "name": "lm-coursier-shaded_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\io\\get-coursier\\lm-coursier-shaded_2.12\\2.1.0\\lm-coursier-shaded_2.12-2.1.0-sources.jar"
                         }
                     ]
                 },
@@ -590,11 +485,6 @@
                         {
                             "name": "log4j-api",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\logging\\log4j\\log4j-api\\2.17.1\\log4j-api-2.17.1.jar"
-                        },
-                        {
-                            "name": "log4j-api",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\logging\\log4j\\log4j-api\\2.17.1\\log4j-api-2.17.1-sources.jar"
                         }
                     ]
                 },
@@ -607,11 +497,6 @@
                         {
                             "name": "log4j-core",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\logging\\log4j\\log4j-core\\2.17.1\\log4j-core-2.17.1.jar"
-                        },
-                        {
-                            "name": "log4j-core",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\logging\\log4j\\log4j-core\\2.17.1\\log4j-core-2.17.1-sources.jar"
                         }
                     ]
                 },
@@ -624,11 +509,6 @@
                         {
                             "name": "log4j-slf4j-impl",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\logging\\log4j\\log4j-slf4j-impl\\2.17.1\\log4j-slf4j-impl-2.17.1.jar"
-                        },
-                        {
-                            "name": "log4j-slf4j-impl",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\apache\\logging\\log4j\\log4j-slf4j-impl\\2.17.1\\log4j-slf4j-impl-2.17.1-sources.jar"
                         }
                     ]
                 },
@@ -641,11 +521,6 @@
                         {
                             "name": "librarymanagement-core_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\librarymanagement-core_2.12\\1.9.1\\librarymanagement-core_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "librarymanagement-core_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\librarymanagement-core_2.12\\1.9.1\\librarymanagement-core_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -658,11 +533,6 @@
                         {
                             "name": "librarymanagement-ivy_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\librarymanagement-ivy_2.12\\1.9.1\\librarymanagement-ivy_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "librarymanagement-ivy_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\librarymanagement-ivy_2.12\\1.9.1\\librarymanagement-ivy_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -675,11 +545,6 @@
                         {
                             "name": "compiler-interface",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\compiler-interface\\1.9.2\\compiler-interface-1.9.2.jar"
-                        },
-                        {
-                            "name": "compiler-interface",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\compiler-interface\\1.9.2\\compiler-interface-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -692,11 +557,6 @@
                         {
                             "name": "zinc-compile_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-compile_2.12\\1.9.2\\zinc-compile_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-compile_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-compile_2.12\\1.9.2\\zinc-compile_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -709,11 +569,6 @@
                         {
                             "name": "file-tree-views",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\swoval\\file-tree-views\\2.1.10\\file-tree-views-2.1.10.jar"
-                        },
-                        {
-                            "name": "file-tree-views",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\swoval\\file-tree-views\\2.1.10\\file-tree-views-2.1.10-sources.jar"
                         }
                     ]
                 },
@@ -726,11 +581,6 @@
                         {
                             "name": "jna",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna\\5.13.0\\jna-5.13.0.jar"
-                        },
-                        {
-                            "name": "jna",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna\\5.13.0\\jna-5.13.0-sources.jar"
                         }
                     ]
                 },
@@ -743,11 +593,6 @@
                         {
                             "name": "jna-platform",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna-platform\\5.13.0\\jna-platform-5.13.0.jar"
-                        },
-                        {
-                            "name": "jna-platform",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\java\\dev\\jna\\jna-platform\\5.13.0\\jna-platform-5.13.0-sources.jar"
                         }
                     ]
                 },
@@ -760,11 +605,6 @@
                         {
                             "name": "util-relation_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-relation_2.12\\1.9.1\\util-relation_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "util-relation_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-relation_2.12\\1.9.1\\util-relation_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -777,11 +617,6 @@
                         {
                             "name": "completion_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\completion_2.12\\1.9.1\\completion_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "completion_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\completion_2.12\\1.9.1\\completion_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -794,11 +629,6 @@
                         {
                             "name": "task-system_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\task-system_2.12\\1.9.1\\task-system_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "task-system_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\task-system_2.12\\1.9.1\\task-system_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -811,11 +641,6 @@
                         {
                             "name": "tasks_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\tasks_2.12\\1.9.1\\tasks_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "tasks_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\tasks_2.12\\1.9.1\\tasks_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -828,11 +653,6 @@
                         {
                             "name": "testing_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\testing_2.12\\1.9.1\\testing_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "testing_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\testing_2.12\\1.9.1\\testing_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -845,11 +665,6 @@
                         {
                             "name": "util-tracking_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-tracking_2.12\\1.9.1\\util-tracking_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "util-tracking_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-tracking_2.12\\1.9.1\\util-tracking_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -862,11 +677,6 @@
                         {
                             "name": "sjson-new-scalajson_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sjson-new-scalajson_2.12\\0.9.1\\sjson-new-scalajson_2.12-0.9.1.jar"
-                        },
-                        {
-                            "name": "sjson-new-scalajson_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sjson-new-scalajson_2.12\\0.9.1\\sjson-new-scalajson_2.12-0.9.1-sources.jar"
                         }
                     ]
                 },
@@ -879,11 +689,6 @@
                         {
                             "name": "jline-terminal",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal\\3.19.0\\jline-terminal-3.19.0.jar"
-                        },
-                        {
-                            "name": "jline-terminal",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal\\3.19.0\\jline-terminal-3.19.0-sources.jar"
                         }
                     ]
                 },
@@ -896,11 +701,6 @@
                         {
                             "name": "zinc-classpath_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-classpath_2.12\\1.9.2\\zinc-classpath_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-classpath_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-classpath_2.12\\1.9.2\\zinc-classpath_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -913,11 +713,6 @@
                         {
                             "name": "zinc-apiinfo_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-apiinfo_2.12\\1.9.2\\zinc-apiinfo_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-apiinfo_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-apiinfo_2.12\\1.9.2\\zinc-apiinfo_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -930,11 +725,6 @@
                         {
                             "name": "zinc_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc_2.12\\1.9.2\\zinc_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc_2.12\\1.9.2\\zinc_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -947,11 +737,6 @@
                         {
                             "name": "core-macros_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\core-macros_2.12\\1.9.1\\core-macros_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "core-macros_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\core-macros_2.12\\1.9.1\\core-macros_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -964,11 +749,6 @@
                         {
                             "name": "util-cache_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-cache_2.12\\1.9.1\\util-cache_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "util-cache_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-cache_2.12\\1.9.1\\util-cache_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -981,11 +761,6 @@
                         {
                             "name": "util-control_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-control_2.12\\1.9.1\\util-control_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "util-control_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-control_2.12\\1.9.1\\util-control_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -998,11 +773,6 @@
                         {
                             "name": "protocol_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\protocol_2.12\\1.9.1\\protocol_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "protocol_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\protocol_2.12\\1.9.1\\protocol_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -1015,11 +785,6 @@
                         {
                             "name": "sjson-new-core_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sjson-new-core_2.12\\0.9.1\\sjson-new-core_2.12-0.9.1.jar"
-                        },
-                        {
-                            "name": "sjson-new-core_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sjson-new-core_2.12\\0.9.1\\sjson-new-core_2.12-0.9.1-sources.jar"
                         }
                     ]
                 },
@@ -1032,11 +797,6 @@
                         {
                             "name": "template-resolver",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\template-resolver\\0.1\\template-resolver-0.1.jar"
-                        },
-                        {
-                            "name": "template-resolver",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\template-resolver\\0.1\\template-resolver-0.1-sources.jar"
                         }
                     ]
                 },
@@ -1049,11 +809,6 @@
                         {
                             "name": "util-position_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-position_2.12\\1.9.1\\util-position_2.12-1.9.1.jar"
-                        },
-                        {
-                            "name": "util-position_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-position_2.12\\1.9.1\\util-position_2.12-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -1066,11 +821,6 @@
                         {
                             "name": "zinc-compile-core_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-compile-core_2.12\\1.9.2\\zinc-compile-core_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-compile-core_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-compile-core_2.12\\1.9.2\\zinc-compile-core_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -1083,11 +833,6 @@
                         {
                             "name": "util-interface",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-interface\\1.9.1\\util-interface-1.9.1.jar"
-                        },
-                        {
-                            "name": "util-interface",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\util-interface\\1.9.1\\util-interface-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -1100,11 +845,6 @@
                         {
                             "name": "jline",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\jline\\jline\\2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493\\jline-2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493.jar"
-                        },
-                        {
-                            "name": "jline",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\jline\\jline\\2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493\\jline-2.14.7-sbt-a1b0ffbb8f64bb820f4f84a0c07a0c0964507493-sources.jar"
                         }
                     ]
                 },
@@ -1117,11 +857,6 @@
                         {
                             "name": "jline-terminal-jna",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal-jna\\3.19.0\\jline-terminal-jna-3.19.0.jar"
-                        },
-                        {
-                            "name": "jline-terminal-jna",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal-jna\\3.19.0\\jline-terminal-jna-3.19.0-sources.jar"
                         }
                     ]
                 },
@@ -1134,11 +869,6 @@
                         {
                             "name": "jline-terminal-jansi",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal-jansi\\3.19.0\\jline-terminal-jansi-3.19.0.jar"
-                        },
-                        {
-                            "name": "jline-terminal-jansi",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-terminal-jansi\\3.19.0\\jline-terminal-jansi-3.19.0-sources.jar"
                         }
                     ]
                 },
@@ -1151,11 +881,6 @@
                         {
                             "name": "disruptor",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lmax\\disruptor\\3.4.2\\disruptor-3.4.2.jar"
-                        },
-                        {
-                            "name": "disruptor",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\lmax\\disruptor\\3.4.2\\disruptor-3.4.2-sources.jar"
                         }
                     ]
                 },
@@ -1168,11 +893,6 @@
                         {
                             "name": "scala-reflect",
                             "path": "C:\\Users\\Googl\\.sbt\\boot\\scala-2.12.18\\lib\\scala-reflect.jar"
-                        },
-                        {
-                            "name": "scala-reflect",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-reflect\\2.12.18\\scala-reflect-2.12.18-sources.jar"
                         }
                     ]
                 },
@@ -1185,11 +905,6 @@
                         {
                             "name": "checker-qual",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\checkerframework\\checker-qual\\3.4.1\\checker-qual-3.4.1.jar"
-                        },
-                        {
-                            "name": "checker-qual",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\checkerframework\\checker-qual\\3.4.1\\checker-qual-3.4.1-sources.jar"
                         }
                     ]
                 },
@@ -1202,11 +917,6 @@
                         {
                             "name": "error_prone_annotations",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\google\\errorprone\\error_prone_annotations\\2.4.0\\error_prone_annotations-2.4.0.jar"
-                        },
-                        {
-                            "name": "error_prone_annotations",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\google\\errorprone\\error_prone_annotations\\2.4.0\\error_prone_annotations-2.4.0-sources.jar"
                         }
                     ]
                 },
@@ -1219,11 +929,6 @@
                         {
                             "name": "scala-collection-compat_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-collection-compat_2.12\\2.9.0\\scala-collection-compat_2.12-2.9.0.jar"
-                        },
-                        {
-                            "name": "scala-collection-compat_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-collection-compat_2.12\\2.9.0\\scala-collection-compat_2.12-2.9.0-sources.jar"
                         }
                     ]
                 },
@@ -1236,11 +941,6 @@
                         {
                             "name": "slf4j-api",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.36\\slf4j-api-1.7.36.jar"
-                        },
-                        {
-                            "name": "slf4j-api",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\slf4j\\slf4j-api\\1.7.36\\slf4j-api-1.7.36-sources.jar"
                         }
                     ]
                 },
@@ -1253,11 +953,6 @@
                         {
                             "name": "scala-compiler",
                             "path": "C:\\Users\\Googl\\.sbt\\boot\\scala-2.12.18\\lib\\scala-compiler.jar"
-                        },
-                        {
-                            "name": "scala-compiler",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-compiler\\2.12.18\\scala-compiler-2.12.18-sources.jar"
                         }
                     ]
                 },
@@ -1270,11 +965,6 @@
                         {
                             "name": "jsch",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\jcraft\\jsch\\0.1.54\\jsch-0.1.54.jar"
-                        },
-                        {
-                            "name": "jsch",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\jcraft\\jsch\\0.1.54\\jsch-0.1.54-sources.jar"
                         }
                     ]
                 },
@@ -1287,11 +977,6 @@
                         {
                             "name": "gigahorse-apache-http_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\gigahorse-apache-http_2.12\\0.7.0\\gigahorse-apache-http_2.12-0.7.0.jar"
-                        },
-                        {
-                            "name": "gigahorse-apache-http_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\gigahorse-apache-http_2.12\\0.7.0\\gigahorse-apache-http_2.12-0.7.0-sources.jar"
                         }
                     ]
                 },
@@ -1304,11 +989,6 @@
                         {
                             "name": "ivy",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\ivy\\ivy\\2.3.0-sbt-a8f9eb5bf09d0539ea3658a2c2d4e09755b5133e\\ivy-2.3.0-sbt-a8f9eb5bf09d0539ea3658a2c2d4e09755b5133e.jar"
-                        },
-                        {
-                            "name": "ivy",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\ivy\\ivy\\2.3.0-sbt-a8f9eb5bf09d0539ea3658a2c2d4e09755b5133e\\ivy-2.3.0-sbt-a8f9eb5bf09d0539ea3658a2c2d4e09755b5133e-sources.jar"
                         }
                     ]
                 },
@@ -1321,11 +1001,6 @@
                         {
                             "name": "jline-reader",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-reader\\3.19.0\\jline-reader-3.19.0.jar"
-                        },
-                        {
-                            "name": "jline-reader",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-reader\\3.19.0\\jline-reader-3.19.0-sources.jar"
                         }
                     ]
                 },
@@ -1338,11 +1013,6 @@
                         {
                             "name": "jline-builtins",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-builtins\\3.19.0\\jline-builtins-3.19.0.jar"
-                        },
-                        {
-                            "name": "jline-builtins",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-builtins\\3.19.0\\jline-builtins-3.19.0-sources.jar"
                         }
                     ]
                 },
@@ -1355,11 +1025,6 @@
                         {
                             "name": "test-agent",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-agent\\1.9.1\\test-agent-1.9.1.jar"
-                        },
-                        {
-                            "name": "test-agent",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-agent\\1.9.1\\test-agent-1.9.1-sources.jar"
                         }
                     ]
                 },
@@ -1372,11 +1037,6 @@
                         {
                             "name": "test-interface",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0.jar"
-                        },
-                        {
-                            "name": "test-interface",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\test-interface\\1.0\\test-interface-1.0-sources.jar"
                         }
                     ]
                 },
@@ -1389,11 +1049,6 @@
                         {
                             "name": "shaded-jawn-parser_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\shaded-jawn-parser_2.12\\0.9.1\\shaded-jawn-parser_2.12-0.9.1.jar"
-                        },
-                        {
-                            "name": "shaded-jawn-parser_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\shaded-jawn-parser_2.12\\0.9.1\\shaded-jawn-parser_2.12-0.9.1-sources.jar"
                         }
                     ]
                 },
@@ -1406,11 +1061,6 @@
                         {
                             "name": "shaded-scalajson_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\shaded-scalajson_2.12\\1.0.0-M4\\shaded-scalajson_2.12-1.0.0-M4.jar"
-                        },
-                        {
-                            "name": "shaded-scalajson_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\shaded-scalajson_2.12\\1.0.0-M4\\shaded-scalajson_2.12-1.0.0-M4-sources.jar"
                         }
                     ]
                 },
@@ -1423,11 +1073,6 @@
                         {
                             "name": "compiler-bridge_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\compiler-bridge_2.12\\1.9.2\\compiler-bridge_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "compiler-bridge_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\compiler-bridge_2.12\\1.9.2\\compiler-bridge_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -1440,11 +1085,6 @@
                         {
                             "name": "zinc-classfile_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-classfile_2.12\\1.9.2\\zinc-classfile_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-classfile_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-classfile_2.12\\1.9.2\\zinc-classfile_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -1457,11 +1097,6 @@
                         {
                             "name": "zinc-core_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-core_2.12\\1.9.2\\zinc-core_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-core_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-core_2.12\\1.9.2\\zinc-core_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -1474,11 +1109,6 @@
                         {
                             "name": "zinc-persist_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-persist_2.12\\1.9.2\\zinc-persist_2.12-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-persist_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-persist_2.12\\1.9.2\\zinc-persist_2.12-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -1491,11 +1121,6 @@
                         {
                             "name": "sjson-new-murmurhash_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sjson-new-murmurhash_2.12\\0.9.1\\sjson-new-murmurhash_2.12-0.9.1.jar"
-                        },
-                        {
-                            "name": "sjson-new-murmurhash_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\sjson-new-murmurhash_2.12\\0.9.1\\sjson-new-murmurhash_2.12-0.9.1-sources.jar"
                         }
                     ]
                 },
@@ -1508,11 +1133,6 @@
                         {
                             "name": "ipcsocket",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\ipcsocket\\ipcsocket\\1.6.2\\ipcsocket-1.6.2.jar"
-                        },
-                        {
-                            "name": "ipcsocket",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\ipcsocket\\ipcsocket\\1.6.2\\ipcsocket-1.6.2-sources.jar"
                         }
                     ]
                 },
@@ -1525,11 +1145,6 @@
                         {
                             "name": "scala-parser-combinators_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-parser-combinators_2.12\\1.1.2\\scala-parser-combinators_2.12-1.1.2.jar"
-                        },
-                        {
-                            "name": "scala-parser-combinators_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\modules\\scala-parser-combinators_2.12\\1.1.2\\scala-parser-combinators_2.12-1.1.2-sources.jar"
                         }
                     ]
                 },
@@ -1542,11 +1157,6 @@
                         {
                             "name": "zero-allocation-hashing",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\openhft\\zero-allocation-hashing\\0.10.1\\zero-allocation-hashing-0.10.1.jar"
-                        },
-                        {
-                            "name": "zero-allocation-hashing",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\net\\openhft\\zero-allocation-hashing\\0.10.1\\zero-allocation-hashing-0.10.1-sources.jar"
                         }
                     ]
                 },
@@ -1559,11 +1169,6 @@
                         {
                             "name": "jansi",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\fusesource\\jansi\\jansi\\2.1.0\\jansi-2.1.0.jar"
-                        },
-                        {
-                            "name": "jansi",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\fusesource\\jansi\\jansi\\2.1.0\\jansi-2.1.0-sources.jar"
                         }
                     ]
                 },
@@ -1576,11 +1181,6 @@
                         {
                             "name": "gigahorse-core_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\gigahorse-core_2.12\\0.7.0\\gigahorse-core_2.12-0.7.0.jar"
-                        },
-                        {
-                            "name": "gigahorse-core_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\gigahorse-core_2.12\\0.7.0\\gigahorse-core_2.12-0.7.0-sources.jar"
                         }
                     ]
                 },
@@ -1593,11 +1193,6 @@
                         {
                             "name": "shaded-apache-httpasyncclient",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\shaded-apache-httpasyncclient\\0.7.0\\shaded-apache-httpasyncclient-0.7.0.jar"
-                        },
-                        {
-                            "name": "shaded-apache-httpasyncclient",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\eed3si9n\\shaded-apache-httpasyncclient\\0.7.0\\shaded-apache-httpasyncclient-0.7.0-sources.jar"
                         }
                     ]
                 },
@@ -1610,11 +1205,6 @@
                         {
                             "name": "jline-style",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-style\\3.19.0\\jline-style-3.19.0.jar"
-                        },
-                        {
-                            "name": "jline-style",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\jline\\jline-style\\3.19.0\\jline-style-3.19.0-sources.jar"
                         }
                     ]
                 },
@@ -1627,11 +1217,6 @@
                         {
                             "name": "zinc-persist-core-assembly",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-persist-core-assembly\\1.9.2\\zinc-persist-core-assembly-1.9.2.jar"
-                        },
-                        {
-                            "name": "zinc-persist-core-assembly",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\zinc-persist-core-assembly\\1.9.2\\zinc-persist-core-assembly-1.9.2-sources.jar"
                         }
                     ]
                 },
@@ -1644,11 +1229,6 @@
                         {
                             "name": "sbinary_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\sbinary_2.12\\0.5.1\\sbinary_2.12-0.5.1.jar"
-                        },
-                        {
-                            "name": "sbinary_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-sbt\\sbinary_2.12\\0.5.1\\sbinary_2.12-0.5.1-sources.jar"
                         }
                     ]
                 },
@@ -1661,11 +1241,6 @@
                         {
                             "name": "ssl-config-core_2.12",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\ssl-config-core_2.12\\0.6.1\\ssl-config-core_2.12-0.6.1.jar"
-                        },
-                        {
-                            "name": "ssl-config-core_2.12",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\ssl-config-core_2.12\\0.6.1\\ssl-config-core_2.12-0.6.1-sources.jar"
                         }
                     ]
                 },
@@ -1678,11 +1253,6 @@
                         {
                             "name": "reactive-streams",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\reactivestreams\\reactive-streams\\1.0.3\\reactive-streams-1.0.3.jar"
-                        },
-                        {
-                            "name": "reactive-streams",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\reactivestreams\\reactive-streams\\1.0.3\\reactive-streams-1.0.3-sources.jar"
                         }
                     ]
                 },
@@ -1695,11 +1265,6 @@
                         {
                             "name": "config",
                             "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\config\\1.4.2\\config-1.4.2.jar"
-                        },
-                        {
-                            "name": "config",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\com\\typesafe\\config\\1.4.2\\config-1.4.2-sources.jar"
                         }
                     ]
                 },
@@ -1712,11 +1277,6 @@
                         {
                             "name": "scala-compiler",
                             "path": "C:\\Users\\Googl\\.sbt\\boot\\scala-2.12.18\\lib\\scala-compiler.jar"
-                        },
-                        {
-                            "name": "scala-compiler",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-compiler\\2.12.18\\scala-compiler-2.12.18-sources.jar"
                         }
                     ]
                 },
@@ -1729,11 +1289,6 @@
                         {
                             "name": "scala-library",
                             "path": "C:\\Users\\Googl\\.sbt\\boot\\scala-2.12.18\\lib\\scala-library.jar"
-                        },
-                        {
-                            "name": "scala-library",
-                            "classifier": "sources",
-                            "path": "C:\\Users\\Googl\\AppData\\Local\\Coursier\\Cache\\v1\\https\\repo1.maven.org\\maven2\\org\\scala-lang\\scala-library\\2.12.18\\scala-library-2.12.18-sources.jar"
                         }
                     ]
                 }

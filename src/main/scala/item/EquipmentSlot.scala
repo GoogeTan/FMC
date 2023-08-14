@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 package item
 
 type EquipmentSlot = ArmorSlot | HandSlot

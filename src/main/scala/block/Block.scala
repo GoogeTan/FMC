@@ -1,4 +1,6 @@
-package me.zahara.fmc
+package fmc
 package block
 
-final case class Block private[fmc](location : ResourceLocation)
+import block.state.{BlockState, Properties}
+
+final case class Block private[fmc](location : ResourceLocation, defaultState : Properties)

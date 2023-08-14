@@ -1,11 +1,10 @@
-package me.zahara.fmc
+package fmc
 package block.entity.action
 
+import action.*
+import data.*
 import level.Level
-import syntax.cats.{*, given}
-
-import cats.data.OptionT
-import cats.{Functor, Monad, Semigroup}
+import syntax.monad.*
 
 final case class SharedData[F[_], T](
                                        fromWorld : (Level, BlockPos) => F[Option[T]],
@@ -19,8 +18,8 @@ def process[F[_] : Monad, T, U](level: Level, pos : BlockPos, shared : SharedDat
   shared.fromWorld(level, pos) >>= {
     case Some(sharedValue) =>
       process(sharedValue) >>= { (newSharedValue, result) =>
-        shared.writeToWorld(level, pos, newSharedValue) *> Some(result).pure // Дропаем результат, так как при удачном чтенгии запись так же должна быть удачной
+        shared.writeToWorld(level, pos, newSharedValue) *> pure(Some(result)) // Дропаем результат, так как при удачном чтенгии запись так же должна быть удачной
       }
-    case None => None.pure[F]
+    case None => pure(None)
   }
 end process

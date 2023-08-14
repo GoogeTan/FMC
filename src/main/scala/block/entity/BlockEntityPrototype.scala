@@ -1,8 +1,8 @@
-package me.zahara.fmc
+package fmc
 package block.entity
 
 import block.entity.action.SharedData
-import block.{BlockState, Properties}
+import block.state.{BlockState, Properties}
 import data.*
 import item.stack.Stack
 import level.Level

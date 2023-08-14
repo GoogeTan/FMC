@@ -1,7 +1,6 @@
-package me.zahara.fmc
+package fmc
 
 import syntax.all.{*, given}
-import io.github.iltotore.iron.*
 
 final case class ResourceLocation(namespace : String :| ResourceNamespace, path : String :| ResourcePath)
 

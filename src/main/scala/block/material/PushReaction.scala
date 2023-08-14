@@ -1,6 +1,6 @@
-package me.zahara.fmc
+package fmc
 package block.material
 
 enum PushReaction:
-  case NORMAL, DESTROY, BLOCK, IGNORE, PUSH_ONLY
+  case Normal, Destroy, Block, Ignore, PushOnly
 end PushReaction

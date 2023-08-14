@@ -1,10 +1,9 @@
-package me.zahara.fmc
+package fmc
 package item.stack
 
 import item.Item
 
-import io.github.iltotore.iron.:|
-import io.github.iltotore.iron.constraint.numeric.Interval.{ClosedOpen, OpenClosed}
+import syntax.all.{*, given}
 
 case class Stack(
                   item : Item,

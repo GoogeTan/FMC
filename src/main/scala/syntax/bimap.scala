@@ -1,11 +1,16 @@
-package me.zahara.fmc
+package fmc
 package syntax
 
-import collection.BiMap
+import collection.{BiMap, ListBiMap}
 
 object bimap:
-  extension [C](collection : C)
-    def keyOf[K, V](value: V)(using biMap: BiMap[C, K, V]): Option[K] = biMap.keyOf(collection, value)
-    def valueOf[K, V](key: K)(using biMap: BiMap[C, K, V]): Option[V] = biMap.valueOf(collection, key)
-  end extension
+  given given_lbim[K, V]: BiMap[ListBiMap[K, V], K, V] with
+    override def keyOf[U >: V](collection: ListBiMap[K, V], value: U): Option[K] =
+      collection.values.find(_._2 == value).map(_._1)
+    end keyOf
+
+    override def valueOf[U >: K](collection: ListBiMap[K, V], key: U): Option[V] =
+      collection.values.find(_._1 == key).map(_._2)
+    end valueOf
+  end given_lbim
 end bimap

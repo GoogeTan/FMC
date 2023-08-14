@@ -1,9 +1,9 @@
-package me.zahara.fmc
+package fmc
 package text
 
-import syntax.cats.{*, given}
-
-import cats.{Applicative, Foldable, Monoid}
+import data.*
+import syntax.all.{*, given}
+import syntax.iron.{*, given}
 
 enum Component:
   case Text(value : String)
@@ -11,10 +11,10 @@ enum Component:
   case Concat(components : List[Component])
 end Component
 
-def asString[F[_] : Applicative](component: Component)(using tr : Translate[F]) : F[String] =
+def asString[F[_] : Ap : Translate](component: Component) : F[String] =
   component match
-    case Component.Text(value) => value.pure[F]
-    case Component.Translate(key) => tr.translate(key).map(_.getOrElse(key))
-    case Component.Concat(components) => components.traverse(asString).map(_.combineAll)
+    case Component.Text(value)        => pure(value)
+    case Component.Translate(key)     => translate(key)                 >>* (_.getOrElse(key))
+    case Component.Concat(components) => traverse(components)(asString) >>* foldMapL
   end match
 end asString

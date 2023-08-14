@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 package item
 
 enum ArmorSlot(index : Int, filterFlag : Int, name : String):

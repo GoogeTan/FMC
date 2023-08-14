@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 package data
 
 trait Serializable[T]:
@@ -6,3 +6,8 @@ trait Serializable[T]:
 
   def deserialize(container : NBT) : Option[T]
 end Serializable
+
+def get[T](name : String, tag : NBT.Compound)(using ser : Serializable[T]) : Option[T] =
+  tag.values.get(name).flatMap(ser.deserialize)
+end get
+

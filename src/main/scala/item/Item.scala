@@ -1,8 +1,6 @@
-package me.zahara.fmc
+package fmc
 package item
 
-import io.github.iltotore.iron.:|
-import io.github.iltotore.iron.constraint.all.{GreaterEqual, Positive}
-import io.github.iltotore.iron.constraint.numeric.Greater
+import syntax.all.{*, given}
 
 final case class Item private[fmc](location: ResourceLocation, maxStackSize : Int :| Positive, maxDamage : Int :| GreaterEqual[0])

@@ -1,10 +1,14 @@
-package me.zahara.fmc
+package fmc
 package syntax
 
 object all:
   export bimap.{*, given}
-  export cats.{*, given}
-  export iron.{*, given}
   export block.{*, given}
-  export level.{*, given}
+  export foldable.{*, given}
+  export iron.{*, given}
+  export monad.{*, given}
+  export monoid.{*, given}
+  export show.{*, given}
+  export split.{*, given}
+  export swap.{*, given}
 end all

@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 package item
 
 import text.ChatFormatting

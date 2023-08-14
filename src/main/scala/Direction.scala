@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 
 enum Direction:
   case East
@@ -8,3 +8,5 @@ enum Direction:
   case Up
   case Down
 end Direction
+
+

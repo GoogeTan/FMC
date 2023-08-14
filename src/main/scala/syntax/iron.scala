@@ -1,4 +1,4 @@
-package me.zahara.fmc
+package fmc
 package syntax
 
 object iron:
@@ -12,5 +12,6 @@ object iron:
   export io.github.iltotore.iron.compileTime.{*,given}
   export io.github.iltotore.iron.constraint.all.{*, given}
   export io.github.iltotore.iron.:|
+  export io.github.iltotore.iron.constraint.numeric.Interval.{*, given}
 end iron
   
