@@ -3,7 +3,7 @@ package block
 
 import block.material.Material
 
-case class BlockSettings(
+final case class BlockSettings(
                           meterial : Material,
                           resistance: Float = .0,
                           hardness: Float = .0,

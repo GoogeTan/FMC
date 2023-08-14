@@ -3,7 +3,7 @@ package block.material
 
 import client.Color
 
-case class Material(
+final case class Material(
                       pushReaction: PushReaction = PushReaction.Normal,
                       blocksMotion: Boolean = true,
                       flammable: Boolean = false,

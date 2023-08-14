@@ -3,7 +3,7 @@ package block.state
 
 import collection.{FGPair, FPair}
 
-case class Properties private[block] (private[block] val values : Map[Property[?], Any]) extends Iterable[PropertyValue[?]]:
+final case class Properties private[block] (private[block] val values : Map[Property[?], Any]) extends Iterable[PropertyValue[?]]:
   override def iterator : Iterator[PropertyValue[?]] =
     values
       .toList

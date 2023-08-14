@@ -12,7 +12,7 @@ import syntax.all.{*, given}
  * @param block блок, состояние которого описано.
  * @param properties значение всех проперти блока. Гарантировано, что установлены все проперти и имеют значения, а так же что лишние проперти не установлены.
  */
-case class BlockState private[state] (block : Block, properties : Properties)
+final case class BlockState private[state] (block : Block, properties : Properties)
 
 /**
  * Создаёт стандартное состояние блока

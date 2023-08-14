@@ -1,7 +1,6 @@
 package fmc
-package block.entity.action
+package block.entity
 
-import action.*
 import data.*
 import level.Level
 import syntax.monad.*
@@ -18,7 +17,7 @@ def process[F[_] : Monad, T, U](level: Level, pos : BlockPos, shared : SharedDat
   shared.fromWorld(level, pos) >>= {
     case Some(sharedValue) =>
       process(sharedValue) >>= { (newSharedValue, result) =>
-        shared.writeToWorld(level, pos, newSharedValue) *> pure(Some(result)) // Дропаем результат, так как при удачном чтенгии запись так же должна быть удачной
+        shared.writeToWorld(level, pos, newSharedValue) *> pure(Some(result)) // Дропаем результат, так как при удачном чтении запись так же должна быть удачной
       }
     case None => pure(None)
   }

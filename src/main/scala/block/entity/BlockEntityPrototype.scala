@@ -1,13 +1,12 @@
 package fmc
 package block.entity
 
-import block.entity.action.SharedData
 import block.state.{BlockState, Properties}
 import data.*
 import item.stack.Stack
 import level.Level
 
-case class BlockEntityPrototype[
+final case class BlockEntityPrototype[
   F[_],
   State,
 ](
@@ -18,4 +17,3 @@ case class BlockEntityPrototype[
    sharedDefaults : List[SharedDefault[F, ?]] = List()
 )
 
-case class SharedDefault[F[_], T](defaultValue : T, shared : SharedData[F, T])

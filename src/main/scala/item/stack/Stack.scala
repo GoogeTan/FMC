@@ -5,7 +5,7 @@ import item.Item
 
 import syntax.all.{*, given}
 
-case class Stack(
+final case class Stack(
                   item : Item,
                   data : ItemData
                 )(

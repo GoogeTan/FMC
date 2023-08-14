@@ -1,7 +1,6 @@
 package fmc
 package syntax
 
-import action.*
 import data.{Monad, Swap}
 
 import scala.annotation.targetName
@@ -11,21 +10,6 @@ object monad:
     def flatMap[B](func : T => F[B]) : F[B] =
       monad.mmap(value)(func)
     end flatMap
-
-    @targetName("mmapOperator")
-    def >>=[B](func: T => F[B]): F[B] =
-      monad.mmap(value)(func)
-    end >>=
-
-    /**
-     * Позволяет опустить результат вычисления, сохраняя весь эффект.
-     * @return
-     */
-    @inline
-    @targetName("dropResultKeepEffectOperator")
-    def *>[B](fb: F[B]): F[B] =
-      flatMap(_ => fb)
-    end *>
 
 
     def map[B](func : T => B) : F[B] =

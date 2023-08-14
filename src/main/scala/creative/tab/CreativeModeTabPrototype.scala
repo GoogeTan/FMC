@@ -4,7 +4,7 @@ package creative.tab
 import item.stack.Stack
 import text.Component
 
-case class CreativeModeTabPrototype(
+final case class CreativeModeTabPrototype(
                                      displayName: Component,
                                      canScroll: Boolean = true,
                                      showTitle: Boolean = true,
