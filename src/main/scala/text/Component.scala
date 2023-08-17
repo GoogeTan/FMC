@@ -3,7 +3,6 @@ package text
 
 import data.*
 import syntax.all.{*, given}
-import syntax.iron.{*, given}
 
 enum Component:
   case Text(value : String)

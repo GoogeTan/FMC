@@ -18,7 +18,7 @@ final case class BlockState private[state] (block : Block, properties : Properti
  * Создаёт стандартное состояние блока
  */
 def defaultStateOf(block : Block) : BlockState =
-  BlockState(block, block.defaultState)
+  BlockState(block, block.defaultProperties)
 end defaultStateOf
 
 /**

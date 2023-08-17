@@ -1,14 +1,16 @@
 package fmc
 package collection
 
+import syntax.bimap.given
+
 final case class ListBiMap[+K, +V] private (values : List[(K, V)])
 
 def containsKey[K, V](listBiMap: ListBiMap[K, V], key : K) : Boolean =
-  listBiMap.values.contains { (currentKey : K, _ : V) => key == currentKey }
+  valueOf(listBiMap, key).isDefined
 end containsKey
 
 def containsValue[K, V](listBiMap: ListBiMap[K, V], value : V) : Boolean =
-  listBiMap.values.contains { (_ : K, currentValue : V) => value == currentValue }
+  keyOf(listBiMap, value).isDefined
 end containsValue
 
 object ListBiMap:
@@ -20,6 +22,10 @@ object ListBiMap:
     else
       None
     end if
+  end apply
+
+  def apply[K, V](pairs: (K, V)*): Option[ListBiMap[K, V]] =
+    apply(pairs.toList)
   end apply
 
   private def areUnique[T](values: List[T]): Boolean = values.toSet.size == values.size

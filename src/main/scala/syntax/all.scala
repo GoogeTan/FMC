@@ -9,6 +9,5 @@ object all:
   export monad.{*, given}
   export monoid.{*, given}
   export show.{*, given}
-  export split.{*, given}
   export swap.{*, given}
 end all
