@@ -4,10 +4,12 @@ package syntax
 import data.Show
 
 object show:
-  given Show[String] with
-    override def show(value: String): String = value
-  end given
+  given Show[String] = a => a
 
+  given Show[Number]  = _.toString
+
+  given Show[Int] = _.toString
+  
   given showList[T : Show] : Show[List[T]] with
     override def show(value: List[T]): String =
       "[" + join(", ", value.map(fmc.data.show)) + "]"
@@ -21,10 +23,8 @@ object show:
     end join
   end showList
   
-  given canonicalBlockPos: Show[BlockPos] with
-    override def show(value: BlockPos): String = 
-      s"Position(x:${value.x}, y:${value.y}, z:${value.z})"
-    end show
-  end canonicalBlockPos
+  given canonicalBlockPos: Show[BlockPos] = value => s"Position(x:${value.x}, y:${value.y}, z:${value.z})"
+
+  given Show[Boolean] = _.toString
 end show
 
