@@ -40,3 +40,4 @@ build/
 /.bsp/
 /.metals/
 /.idea/
+/project/.bloop/
