@@ -11,7 +11,7 @@ def mmap[F[_], A, B](value : F[A])(func : A => F[B])(using mmp : MMap[F]) : F[B]
 end mmap
 
 def mmapi[F[_] : Monad, G[_] : Monad : Swap, A, B](value : F[G[A]])(func : A => F[G[B]]) : F[G[B]] =
-  fmc.syntax.monad.innerMonad[F, G].mmap(value)(func)
+  fmc.syntax.monad.inner.innerMonad[F, G].mmap(value)(func)
 end mmapi
 
 extension[F[_], T] (value: F[T])(using monad: Monad[F])

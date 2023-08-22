@@ -7,6 +7,7 @@ object all:
   export foldable.{*, given}
   export iron.{*, given}
   export monad.{*, given}
+  export monad.all.{*, given}
   export monoid.{*, given}
   export show.{*, given}
   export swap.{*, given}
