@@ -17,13 +17,13 @@ object monad:
     end map
   end extension
 
-  given Monad[Option] with
+  given monadOption: Monad[Option] with
     override def mmap[A, B](value: Option[A])(func: A => Option[B]): Option[B] =
       value.flatMap(func)
     end mmap
 
     override def pure[T](value: T): Option[T] = Some(value)
-  end given
+  end monadOption
 
   given rightEither[Error] : Monad[Either[Error, _]] with
     override def pure[T](value: T): Either[Error, T] = Right(value)
@@ -36,7 +36,7 @@ object monad:
 
   type Inner[F[_], G[_], T] = F[G[T]]
 
-  given innerMonad[F[_] : Monad, G[_] : Monad : Swap, E] : Monad[Inner[F, G, _]] with
+  given innerMonad[F[_] : Monad, G[_] : Monad : Swap] : Monad[Inner[F, G, _]] with
     override def mmap[A, B](value: Inner[F, G, A])(func: A => Inner[F, G, B]): Inner[F, G, B] =
       data.mmap[F, G[A], G[B]](value) { (innerValue : G[A]) =>
         data.fmap(
@@ -50,7 +50,7 @@ object monad:
     end pure
   end innerMonad
 
-  given Monad[[T] =>> T] with
+  given identityMonad : Monad[[T] =>> T] with
     override def apply[A, B](value: A)(func: A => B): B =
       func(value)
     end apply
@@ -60,9 +60,9 @@ object monad:
     end mmap
 
     override def pure[T](value: T): T = value
-  end given
+  end identityMonad
 
-  given Monad[List] with
+  given monadList: Monad[List] with
     override def fmap[A, B](value: List[A])(func: A => B): List[B] =
       value.map(func)
     end fmap
@@ -72,5 +72,5 @@ object monad:
     end mmap
 
     override def pure[T](value: T): List[T] = value :: Nil
-  end given
+  end monadList
 end monad

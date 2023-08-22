@@ -19,4 +19,14 @@ extension [F[_] : FMap, A](value : F[A])
   def >>*[B](func : A => B) : F[B] =
     fmap(value)(func)
   end >>*
+  
+  /**
+   * Drops old result but keeping the effect
+   * @param result
+   * @tparam T
+   * @return
+   */
+  def *>[T](result : T) : F[T] =
+    fmap(value)(_ => result)
+  end *>
 end extension

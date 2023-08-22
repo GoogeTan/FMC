@@ -36,7 +36,7 @@ extension[F[_], T] (value: F[T])(using monad: Ap[F])
    */
   @inline
   @targetName("dropResultKeepEffectOperator")
-  def *>[B](fb: F[B]): F[B] =
+  def *>>[B](fb: F[B]): F[B] =
     apply(value)(fmap(fb)(a => * => a))
-  end *>
+  end *>>
 end extension
