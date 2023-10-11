@@ -1,5 +1,7 @@
 package fmc
 
+import Direction.{ Down, East, West }
+
 enum Direction extends Comparable[Direction]:
   case East
   case West
@@ -17,4 +19,8 @@ enum Direction extends Comparable[Direction]:
   end toString
 end Direction
 
+object Direction:
+  def allValues : Set[Direction] = Direction.values.toSet
+  def horizontalValues : Set[Direction] = Set(West, East, North, South)
+end Direction
 

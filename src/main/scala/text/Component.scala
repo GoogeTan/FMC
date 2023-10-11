@@ -14,6 +14,6 @@ def asString[F[_] : Ap : Translate](component: Component) : F[String] =
   component match
     case Component.Text(value)        => pure(value)
     case Component.Translate(key)     => translate(key)                 >>* (_.getOrElse(key))
-    case Component.Concat(components) => traverse(components)(asString) >>* foldMapL
+    case Component.Concat(components) => components.traverse(asString) >>* foldMapL
   end match
 end asString

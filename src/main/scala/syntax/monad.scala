@@ -3,6 +3,7 @@ package syntax
 
 import data.{ Monad, Swap }
 import typing.{ Id, Inner }
+import fmc.data.traverse
 
 object monad:
   extension[F[_], T] (value : F[T])(using monad : Monad[F])
@@ -45,11 +46,12 @@ object monad:
   end either
   
   object inner:
+    
     given innerMonad[F[_] : Monad, G[_] : Monad : Swap] : Monad[Inner[F, G, _]] with
       override def mmap[A, B](value: Inner[F, G, A])(func: A => Inner[F, G, B]): Inner[F, G, B] =
         data.mmap[F, G[A], G[B]](value) { (innerValue : G[A]) =>
           data.fmap(
-            data.traverse[G, F, A, G[B]](innerValue)(func)
+            innerValue.traverse[[T] =>> F[G[T]], B](func)
           )(data.mmap(_)(scala.Predef.identity))
         }
       end mmap
