@@ -10,7 +10,7 @@ import syntax.all.{ *, given }
 
 val pistonFaceProperty = Property[Direction]("direction", ListBiMap(Direction.values.map(dir => (dir, dir.toString)).toList).get)(using classOf)
 
-def piston[F[_] : Monad : GetBlock](settings: BlockSettings) = BlockPrototype[F, pistonFaceProperty.type](
+def piston[F[_] : Monad : GetBlock](settings: BlockSettings) = BlockPrototype[F](
   settings = settings,
   defaultProperties = noProperties ++ (pistonFaceProperty, Direction.Down),
   neighborUpdatedReaction = onNeighborChanged,

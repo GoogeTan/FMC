@@ -8,16 +8,16 @@ import data.Serializable
 import fmc.block.state.Property
 
 trait RegistrableBlockEntity[F[_]]:
-  def registerBlockWithEntity[State : Serializable, K <: Property[?]](
+  def registerBlockWithEntity[State : Serializable](
     resourceLocation: ResourceLocation,
-    prototype: BlockPrototype[F, K],
+    prototype: BlockPrototype[F],
     blockEntityPrototype: BlockEntityPrototype[F, State]
   ): F[Block]
 end RegistrableBlockEntity
 
-def registerBlockWithEntity[F[_], State: Serializable, K <: Property[?]](
+def registerBlockWithEntity[F[_], State: Serializable](
   resourceLocation: ResourceLocation,
-  prototype: BlockPrototype[F, K],
+  prototype: BlockPrototype[F],
   blockEntityPrototype: BlockEntityPrototype[F, State]
 )(using reg : RegistrableBlockEntity[F]): F[Block] =
   reg.registerBlockWithEntity(resourceLocation, prototype, blockEntityPrototype)
