@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'scala'
+}
+
+group = 'katze'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.scala-lang/scala3-library
+    implementation 'org.scala-lang:scala3-library_3:3.3.1'
+    // https://mvnrepository.com/artifact/io.github.iltotore/iron
+    implementation 'io.github.iltotore:iron_3:2.2.1'
+
+}
+
+tasks.withType(ScalaCompile) {
+    // Use incremental compilation
+    //scalaCompileOptions.useAnt = false
+    // Enable Scala warnings output
+    scalaCompileOptions.additionalParameters = ["-feature",  "-Ykind-projector:underscores"]
+}
+
+tasks.withType(Jar) {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
