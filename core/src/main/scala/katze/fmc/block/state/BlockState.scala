@@ -1,6 +1,6 @@
 package katze.fmc.block.state
 
-import katze.fmc.block.Block
+import katze.fmc.block.BlockRegistryEntry
 import katze.fmc.block
 import collection.*
 
@@ -10,12 +10,12 @@ import collection.*
  * @param block блок, состояние которого описано.
  * @param properties значение всех проперти блока. Гарантировано, что установлены все проперти и имеют значения, а так же что лишние проперти не установлены.
  */
-final case class BlockState private[state] (block : Block, properties : Properties)
+final case class BlockState private[state] (block : BlockRegistryEntry, properties : Properties)
 
 /**
  * Создаёт стандартное состояние блока
  */
-def defaultStateOf(block : Block) : BlockState =
+def defaultStateOf(block : BlockRegistryEntry) : BlockState =
   BlockState(block, block.defaultProperties)
 end defaultStateOf
 

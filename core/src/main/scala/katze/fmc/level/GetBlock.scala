@@ -1,12 +1,12 @@
 package katze.fmc.level
 
 import katze.fmc.*
-import katze.fmc.block.Block
+import katze.fmc.block.BlockRegistryEntry
 import katze.fmc.block.state.{ BlockState, Properties }
 
 trait GetBlock[F[_], Level]:
   def blockPropertiesAt(level : Level, pos : BlockPos) : F[Properties]
-  def blockAt(level : Level, pos: BlockPos) : F[Block]
+  def blockAt(level : Level, pos: BlockPos) : F[BlockRegistryEntry]
   def blockStateAt(level : Level, pos: BlockPos): F[BlockState]
 end GetBlock
 
@@ -15,7 +15,7 @@ def blockPropertiesAt[F[_], Level](level: Level, pos: BlockPos)(using gb : GetBl
   gb.blockPropertiesAt(level, pos)
 end blockPropertiesAt
 
-def blockAt[F[_], Level](level: Level, pos: BlockPos)(using gb : GetBlock[F, Level]): F[Block] =
+def blockAt[F[_], Level](level: Level, pos: BlockPos)(using gb : GetBlock[F, Level]): F[BlockRegistryEntry] =
   gb.blockAt(level, pos)
 end blockAt
 

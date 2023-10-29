@@ -18,7 +18,7 @@ object io:
   end given
   
   given GetBlock[IO, Level] with
-    override def blockAt(level: Level, pos: BlockPos): IO[Block] =
+    override def blockAt(level: Level, pos: BlockPos): IO[BlockRegistryEntry] =
       blockStateAt(level, pos) >>* (_.block)
     
     override def blockPropertiesAt(level: Level, pos: BlockPos): IO[Properties] =

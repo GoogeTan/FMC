@@ -1,10 +1,10 @@
 package katze.fmc.example
 
-import katze.fmc.block.Block
+import katze.fmc.block.BlockRegistryEntry
 import katze.fmc.block.state.BlockState
 
 trait BlockPistonPushReaction[F[_]]:
-  def reaction(block : Block) : F[PistonPushReaction]
+  def reaction(block : BlockRegistryEntry) : F[PistonPushReaction]
   
   def madeOfObsidian(block : BlockState) : F[Boolean]
   
@@ -19,7 +19,7 @@ enum PistonPushReaction:
   case Normal, Destroy, Block, Ignore, PushOnly
 end PistonPushReaction
 
-def blockPistonPushReaction[F[_]](block : Block)(using reaction: BlockPistonPushReaction[F]): F[PistonPushReaction] = reaction.reaction(block)
+def blockPistonPushReaction[F[_]](block : BlockRegistryEntry)(using reaction: BlockPistonPushReaction[F]): F[PistonPushReaction] = reaction.reaction(block)
 
 def isMadeOfObsidian[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.madeOfObsidian(block)
 

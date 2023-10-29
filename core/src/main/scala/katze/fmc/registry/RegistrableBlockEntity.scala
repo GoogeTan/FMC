@@ -1,7 +1,7 @@
 package katze.fmc.registry
 
 import katze.fmc.ResourceLocation
-import katze.fmc.block.{ Block, BlockPrototype }
+import katze.fmc.block.{ BlockRegistryEntry, BlockPrototype }
 import katze.fmc.block.entity.BlockEntityPrototype
 import katze.fmc.block.state.Property
 import katze.fmc.data.*
@@ -16,7 +16,7 @@ trait RegistrableBlockEntity[
     resourceLocation: ResourceLocation,
     prototype: BlockPrototype[F, Level],
     blockEntityPrototype: BlockEntityPrototype[F, Level, ClientLevel, ServerLevel, State]
-  ): F[Block]
+  ): F[BlockRegistryEntry]
 end RegistrableBlockEntity
 
 def registerBlockWithEntity[
@@ -29,6 +29,6 @@ def registerBlockWithEntity[
   resourceLocation: ResourceLocation,
   prototype: BlockPrototype[F, Level],
   blockEntityPrototype: BlockEntityPrototype[F, Level, ClientLevel, ServerLevel, State]
-)(using reg : RegistrableBlockEntity[F, Level, ClientLevel, ServerLevel]): F[Block] =
+)(using reg : RegistrableBlockEntity[F, Level, ClientLevel, ServerLevel]): F[BlockRegistryEntry] =
   reg.registerBlockWithEntity(resourceLocation, prototype, blockEntityPrototype)
 end registerBlockWithEntity

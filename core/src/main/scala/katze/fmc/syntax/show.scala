@@ -2,7 +2,7 @@ package katze.fmc.syntax
 
 import katze.fmc.data.*
 import katze.fmc.{ BlockPos, Direction }
-import katze.fmc.block.Block
+import katze.fmc.block.BlockRegistryEntry
 import katze.fmc.block.state.{ Properties, Property, foldP }
 
 /**
@@ -35,9 +35,9 @@ object show:
 
   given javaBoolShow : Show[java.lang.Boolean] = _.toString
 
-  given shortShowBlock: Show[Block] = a => s"Block(${a.location})"
+  given shortShowBlock: Show[BlockRegistryEntry] = a => s"Block(${a.location})"
 
-  given longShowBlock: Show[Block] = a => s"Block(name=${a.location};defaultProperties=${shortPropertiesShow.show(a.defaultProperties)})"
+  given longShowBlock: Show[BlockRegistryEntry] = a => s"Block(name=${a.location};defaultProperties=${shortPropertiesShow.show(a.defaultProperties)})"
 
   given shortPropertiesShow: Show[Properties] = a =>
     "["
@@ -54,6 +54,6 @@ object show:
 
   given longPropertyShow[T <: Comparable[T]]: Show[Property[T]] = a => s"Property(name=${a.name}, values=${join(",", a.values.map(_._2).toList)}))"
   
-  given showDirection : Show[Direction] = (_.toString.toLowerCase)
+  given showDirection : Show[Direction] = _.toString.toLowerCase
 end show
 

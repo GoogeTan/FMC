@@ -60,8 +60,8 @@ def canPistonMoveBlockTowardsDirection[
                                         Level
                                           : LevelBounds[F, _]
                                       ](
-                                         piston: Block,
-                                         stickyPiston: Block,
+                                         piston: BlockRegistryEntry,
+                                         stickyPiston: BlockRegistryEntry,
                                          targetsBlockState : BlockState,
                                          level : Level,
                                          targetPos : BlockPos,
@@ -85,7 +85,7 @@ private def isBlockMovable[F[_] : Monad : BlockPistonPushReaction](blockState : 
   }
 end isBlockMovable
 
-private def isExtendedPiston[F[_] : Ap](state : BlockState, pistons : Block*) : Boolean =
+private def isExtendedPiston[F[_] : Ap](state : BlockState, pistons : BlockRegistryEntry*) : Boolean =
   pistons.contains(state.block) && valueFromState(state, extendedProperty).getOrElse(java.lang.Boolean.FALSE)
 end isExtendedPiston
 

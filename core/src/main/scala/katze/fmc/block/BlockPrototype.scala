@@ -27,19 +27,19 @@ end blockPrototype
 
 @FunctionalInterface
 trait NeighborUpdatedReaction[F[_], -Level]:
-  def reaction(self : Block, level : Level, pos : BlockPos, state : BlockState, from : BlockPos, fromBlockState : BlockState) : F[Unit]
+  def reaction(self : BlockRegistryEntry, level : Level, pos : BlockPos, state : BlockState, from : BlockPos, fromBlockState : BlockState) : F[Unit]
 end NeighborUpdatedReaction
 
 class NoNeighborUpdatedReaction[F[_] : Ap] extends NeighborUpdatedReaction[F, Any]:
-  override def reaction(self: Block, level: Any, pos: BlockPos, state: BlockState, from: BlockPos, fromBlockState: BlockState): F[Unit] = pure(())
+  override def reaction(self: BlockRegistryEntry, level: Any, pos: BlockPos, state: BlockState, from: BlockPos, fromBlockState: BlockState): F[Unit] = pure(())
 end NoNeighborUpdatedReaction
 
 
 @FunctionalInterface
 trait PlacementState[F[_], -Level]:
-  def stateForPlacement(self : Block, level : Level, pos : BlockPos) : F[BlockState]
+  def stateForPlacement(self : BlockRegistryEntry, level : Level, pos : BlockPos) : F[BlockState]
 end PlacementState
 
 class DefaultPlacementState[F[_] : Ap] extends PlacementState[F, Any]:
-  override def stateForPlacement(self: Block, level: Any, pos: BlockPos): F[BlockState] = pure(defaultStateOf(self))
+  override def stateForPlacement(self: BlockRegistryEntry, level: Any, pos: BlockPos): F[BlockState] = pure(defaultStateOf(self))
 end DefaultPlacementState

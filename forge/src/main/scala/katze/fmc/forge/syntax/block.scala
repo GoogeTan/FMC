@@ -1,6 +1,6 @@
 package katze.fmc.forge.syntax
 
-import katze.fmc.block.Block as FmcBlock
+import katze.fmc.block.BlockRegistryEntry as FmcBlock
 import net.minecraft.core.Registry
 import net.minecraft.core.registries.Registries
 import net.minecraft.world.level.block.Block as VanilaBlock
