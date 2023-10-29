@@ -9,7 +9,6 @@ import katze.fmc.forge.IO
 import net.minecraft.world.level.{ Level, SignalGetter }
 import katze.fmc.forge.syntax.all.{ *, given }
 import katze.fmc.data.*
-import net.minecraft.world.level.block.piston.PistonBaseBlock
 
 object io:
   given Monad[IO] with
@@ -44,6 +43,10 @@ object io:
     override def minY(level: Level): IO[Int] =
       IO.Dirt(() => level.dimensionType().minY())
     end minY
+    
+    override def isWithinBorderBounds(level: Level, pos: BlockPos): IO[Boolean] =
+      IO.Dirt(() => level.getWorldBorder.isWithinBounds(pos))
+    end isWithinBorderBounds
   end given
   
   def updateBlockAt(level : Level, pos : BlockPos, f : BlockState => Option[BlockState]) : IO[Option[BlockState]] =

@@ -7,6 +7,7 @@ import katze.fmc.block.*
 import katze.fmc.data.*
 import katze.fmc.syntax.show.{ javaBoolShow, showDirection }
 import katze.fmc.data.{ Ap, Monad }
+import katze.fmc.example.PistonPushReaction.*
 import katze.fmc.level.*
 import katze.fmc.syntax.all.{ *, given }
 
@@ -52,50 +53,48 @@ def hasRedstonePowerAtSides[F[_] : Ap, Level : RedstoneView[F, _]](level : Level
   sides.traverse(dir => isEmittingRedstonePower(level, pos.relative(dir), dir)) >>* (_.contains(true))
 end hasRedstonePowerAtSides
 
-def isPushable[
-                F[_]
-                  : Monad
-                  : BlockPistonPushReaction,
-                Level
-                  : LevelBounds[F, _]
-              ](
-                 state : BlockState,
-                 level : Level,
-                 pos : BlockPos,
-                 direction : Direction,
-                 canBreak : Boolean,
-                 pistonDir : Direction,
-                 piston : Block,
-                 stickyPiston : Block
-               ) : F[Boolean] =
-  
-  map4(inBounds(level, pos, direction), isAir(state), madeOfObsidian(state), hasBlockEntity(state))(
-    inBounds => isAir => isMadeOfObsidian => hasBlockEntity =>
-        if !inBounds then
-          false
-        else if isAir then
-          true
-        else if isMadeOfObsidian then
-          false
-        else if state.block != piston && state.block != stickyPiston then
-          ??? // TODO закончить кусок с случаем, если у не поршень, а любой блок
-        else if valueFromState(state, extendedProperty).get then
-          false
-        else
-          !hasBlockEntity
-  )
-end isPushable
+def canPistonMoveBlockTowardsDirection[
+                                        F[_]
+                                          : Monad
+                                          : BlockPistonPushReaction,
+                                        Level
+                                          : LevelBounds[F, _]
+                                      ](
+                                         piston: Block,
+                                         stickyPiston: Block,
+                                         targetsBlockState : BlockState,
+                                         level : Level,
+                                         targetPos : BlockPos,
+                                         direction : Direction,
+                                         canBreak : Boolean,
+                                         pistonDirection : Direction
+                                       ) : F[Boolean] =
+  staysInWorldBounds(level, targetPos, direction)
+    && !isMadeOfObsidian(targetsBlockState)
+    && !isUnbreakable(targetsBlockState)
+    && !isExtendedPiston(targetsBlockState, piston, stickyPiston)
+    && (isAir(targetsBlockState) || isBlockMovable(targetsBlockState, direction, canBreak, pistonDirection))
+end canPistonMoveBlockTowardsDirection
 
-private def inBounds[F[_] : Ap, Level : LevelBounds[F, _]](level : Level, pos : BlockPos, direction : Direction) : F[Boolean] =
-  map2(minY(level), maxY(level)):
-    minY => maxY =>
-      if pos.y < minY || maxY < pos.y then
-        false
-      else if direction == Down && pos.y == minY then
-        false
-      else if direction == Up && pos.y == maxY then
-        false
-      else
-        true
-      end if
-end inBounds
+private def isBlockMovable[F[_] : Monad : BlockPistonPushReaction](blockState : BlockState, direction: Direction, canBreak: Boolean, pistonDir: Direction) : F[Boolean] =
+  blockPistonPushReaction(blockState.block) >>= {
+    case PistonPushReaction.Block => pure(false)
+    case PistonPushReaction.Destroy => pure(canBreak)
+    case PistonPushReaction.PushOnly => pure(direction == pistonDir)
+    case _ => !hasBlockEntity(blockState)
+  }
+end isBlockMovable
+
+private def isExtendedPiston[F[_] : Ap](state : BlockState, pistons : Block*) : Boolean =
+  pistons.contains(state.block) && valueFromState(state, extendedProperty).getOrElse(java.lang.Boolean.FALSE)
+end isExtendedPiston
+
+private def staysInWorldBounds[F[_] : Ap, Level : LevelBounds[F, _]](level : Level, pos : BlockPos, pushDirection : Direction) : F[Boolean] =
+  map3(minY(level), maxY(level), isWithinBorderBounds(level, pos)):
+    minY => maxY => insideBorder =>
+      insideBorder
+        && !(pos.y < minY)
+        && !(pos.y > maxY)
+        && !(pushDirection == Down && pos.y == minY)
+        && !(pushDirection == Up && pos.y == maxY)
+end staysInWorldBounds

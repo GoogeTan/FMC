@@ -8,6 +8,40 @@ trait Monad[F[_]] extends FMap[F] with MMap[F] with Ap[F]:
   end apply
 end Monad
 
+extension[F[_] : Monad](value : F[Boolean])
+  def ||(another : F[Boolean]) : F[Boolean] =
+    value >>= (x => if (x) pure(true) else another)
+  end ||
+  
+  def &&(another: F[Boolean]): F[Boolean] =
+    value >>= (x => if (!x) pure(false) else another)
+  end &&
+  
+  def &&(another: Boolean): F[Boolean] =
+    value >>* (x => x && another)
+  end &&
+  
+  def unary_! : F[Boolean] =
+    fmap(value)(a => !a)
+  end unary_!
+end extension
+
+extension(value : Boolean)
+  def ||[F[_] : Monad](another : F[Boolean]) : F[Boolean] =
+    if value then
+      pure(true)
+    else
+      another
+  end ||
+  
+  def &&[F[_] : Monad](another: F[Boolean]): F[Boolean] =
+    if !value then
+      pure(false)
+    else
+      another
+  end &&
+end extension
+
 object Monad:
   def apply[F[_]](using m : Monad[F]): Monad[F] = m
 end Monad

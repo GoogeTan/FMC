@@ -63,18 +63,4 @@ extension[F[_], T] (value: F[T])(using monad: Ap[F])
   end *>>
 end extension
 
-extension[F[_]](value : F[Boolean])(using ap : Ap[F])
-  def ||(another : F[Boolean]) : F[Boolean] =
-    map2(value, another)(a => b => a || b)
-  end ||
-  
-  def &&(another: F[Boolean]): F[Boolean] =
-    map2(value, another)(a => b => a && b)
-  end &&
-  
-  def unary_! : F[Boolean] =
-    fmap(value)(a => !a)
-  end unary_!
-end extension
-  
   

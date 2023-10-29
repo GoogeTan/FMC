@@ -11,6 +11,8 @@ trait BlockPistonPushReaction[F[_]]:
   def isAir(block : BlockState) : F[Boolean]
   
   def hasBlockEntity(block : BlockState) : F[Boolean]
+  
+  def isUnbreakable(blockState: BlockState) : F[Boolean]
 end BlockPistonPushReaction
 
 enum PistonPushReaction:
@@ -19,8 +21,9 @@ end PistonPushReaction
 
 def blockPistonPushReaction[F[_]](block : Block)(using reaction: BlockPistonPushReaction[F]): F[PistonPushReaction] = reaction.reaction(block)
 
-def madeOfObsidian[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.madeOfObsidian(block)
+def isMadeOfObsidian[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.madeOfObsidian(block)
 
 def isAir[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.isAir(block)
 
 def hasBlockEntity[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.hasBlockEntity(block)
+def isUnbreakable[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.isUnbreakable(block)

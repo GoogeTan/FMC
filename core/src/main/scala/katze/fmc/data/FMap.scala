@@ -30,3 +30,5 @@ extension [F[_] : FMap, A](value : F[A])
     fmap(value)(_ => result)
   end *>
 end extension
+
+
