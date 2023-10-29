@@ -3,8 +3,8 @@ package katze.fmc
 import katze.fmc.Direction.*
 
 enum Direction(val axis : Axis, val orientation: AxisOrientation, val offset : BlockPos) extends Comparable[Direction]:
-  case East  extends Direction(Axis.Y, AxisOrientation.Positive, BlockPos( 1,  0,  0))
-  case West  extends Direction(Axis.Y, AxisOrientation.Negative, BlockPos(-1,  0,  0))
+  case East  extends Direction(Axis.X, AxisOrientation.Positive, BlockPos( 1,  0,  0))
+  case West  extends Direction(Axis.X, AxisOrientation.Negative, BlockPos(-1,  0,  0))
   case North extends Direction(Axis.Z, AxisOrientation.Negative, BlockPos( 0,  0, -1))
   case South extends Direction(Axis.Z, AxisOrientation.Positive, BlockPos( 0,  0,  1))
   case Up    extends Direction(Axis.Y, AxisOrientation.Positive, BlockPos( 0,  1,  0))
