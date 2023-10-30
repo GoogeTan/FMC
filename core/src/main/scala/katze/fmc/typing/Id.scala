@@ -1,5 +1,3 @@
-package katze.fmc
-package typing
+package katze.fmc.typing
 
- 
 type Id[T] = T

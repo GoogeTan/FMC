@@ -1,7 +1,5 @@
 package katze.fmc.item
 
-
-
 enum ArmorSlot(index : Int, filterFlag : Int, name : String):
   case Feet  extends ArmorSlot(0, 1, "feet")
   case Legs  extends ArmorSlot(1, 2, "legs")

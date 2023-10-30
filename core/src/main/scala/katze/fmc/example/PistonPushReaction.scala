@@ -13,6 +13,8 @@ trait BlockPistonPushReaction[F[_]]:
   def hasBlockEntity(block : BlockState) : F[Boolean]
   
   def isUnbreakable(blockState: BlockState) : F[Boolean]
+  
+  def isPistonBlock(blockState: BlockState) : F[Boolean]
 end BlockPistonPushReaction
 
 enum PistonPushReaction:
@@ -27,3 +29,4 @@ def isAir[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): 
 
 def hasBlockEntity[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.hasBlockEntity(block)
 def isUnbreakable[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.isUnbreakable(block)
+def isPistonBlock[F[_]](block: BlockState)(using reaction: BlockPistonPushReaction[F]): F[Boolean] = reaction.isPistonBlock(block)

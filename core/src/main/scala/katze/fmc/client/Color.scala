@@ -1,7 +1,6 @@
-package katze.fmc
-package client
+package katze.fmc.client
 
-import syntax.all.{*, given}
+import katze.fmc.syntax.all.{*, given}
 
 opaque type Color = Int
 

@@ -4,21 +4,21 @@ import katze.fmc.*
 import katze.fmc.block.BlockRegistryEntry
 import katze.fmc.block.state.{ BlockState, Properties }
 
-trait GetBlock[F[_], Level]:
+trait BlockView[F[_], Level]:
   def blockPropertiesAt(level : Level, pos : BlockPos) : F[Properties]
   def blockAt(level : Level, pos: BlockPos) : F[BlockRegistryEntry]
   def blockStateAt(level : Level, pos: BlockPos): F[BlockState]
-end GetBlock
+end BlockView
 
 
-def blockPropertiesAt[F[_], Level](level: Level, pos: BlockPos)(using gb : GetBlock[F, Level]): F[Properties] =
+def blockPropertiesAt[F[_], Level](level: Level, pos: BlockPos)(using gb : BlockView[F, Level]): F[Properties] =
   gb.blockPropertiesAt(level, pos)
 end blockPropertiesAt
 
-def blockAt[F[_], Level](level: Level, pos: BlockPos)(using gb : GetBlock[F, Level]): F[BlockRegistryEntry] =
+def blockAt[F[_], Level](level: Level, pos: BlockPos)(using gb : BlockView[F, Level]): F[BlockRegistryEntry] =
   gb.blockAt(level, pos)
 end blockAt
 
-def blockStateAt[F[_], Level](level: Level, pos: BlockPos)(using gb : GetBlock[F, Level]): F[BlockState] =
+def blockStateAt[F[_], Level](level: Level, pos: BlockPos)(using gb : BlockView[F, Level]): F[BlockState] =
   gb.blockStateAt(level, pos)
 end blockStateAt

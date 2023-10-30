@@ -1,7 +1,7 @@
 package katze.fmc.forge.syntax
 
 import katze.fmc.data.Monad
-import katze.fmc.level.{ GetBlock, LevelBounds, PropertiesAtPos, RedstoneSignal, RedstoneView }
+import katze.fmc.level.{ BlockView, LevelBounds, PropertyAccess, RedstoneSignal, RedstoneView }
 import katze.fmc.{ BlockPos, Direction }
 import katze.fmc.block.*
 import katze.fmc.block.state.*
@@ -17,7 +17,7 @@ object io:
     override def pure[T](value: T): IO[T] = IO.Pure(value)
   end given
   
-  given GetBlock[IO, Level] with
+  given BlockView[IO, Level] with
     override def blockAt(level: Level, pos: BlockPos): IO[BlockRegistryEntry] =
       blockStateAt(level, pos) >>* (_.block)
     
@@ -61,7 +61,7 @@ object io:
     )
   end updateBlockAt
   
-  given PropertiesAtPos[IO, Level] with
+  given PropertyAccess[IO, Level] with
     override def updatePropertyAt[T <: Comparable[T]](level: Level, pos: BlockPos, property: Property[T], newValue: T): IO[Option[T]] =
       updateBlockAt(
         level,

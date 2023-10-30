@@ -1,4 +1,3 @@
-package katze.fmc
-package item
+package katze.fmc.item
 
 type EquipmentSlot = ArmorSlot | HandSlot

@@ -21,6 +21,10 @@ extension[F[_] : Monad](value : F[Boolean])
     value >>* (x => x && another)
   end &&
   
+  def &&(another: java.lang.Boolean): F[Boolean] =
+    value >>* (x => x && another)
+  end &&
+  
   def unary_! : F[Boolean] =
     fmap(value)(a => !a)
   end unary_!
