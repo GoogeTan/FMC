@@ -26,5 +26,8 @@ object ListBiMap:
   end apply
 
   private def areUnique[T](values: Iterable[T]): Boolean = values.toSet.size == values.size
+
+  def unsafe[K, V](values : Iterable[(K, V)]) : ListBiMap[K, V] = apply(values).get
+  
 end ListBiMap
 

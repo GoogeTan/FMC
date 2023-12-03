@@ -23,17 +23,17 @@ public class PistonStructureResolver {
     private final List<BlockPos> toPush = Lists.newArrayList();
     private final Direction pistonDirection;
 
-    public PistonStructureResolver(Level p_60418_, BlockPos p_60419_, Direction p_60420_, boolean p_60421_) {
-        this.level = p_60418_;
-        this.pistonPos = p_60419_;
-        this.pistonDirection = p_60420_;
-        this.extending = p_60421_;
-        if (p_60421_) {
-            this.pushDirection = p_60420_;
-            this.startPos = p_60419_.relative(p_60420_);
+    public PistonStructureResolver(Level level, BlockPos pistonPos, Direction pistonDirection, boolean extending) {
+        this.level = level;
+        this.pistonPos = pistonPos;
+        this.pistonDirection = pistonDirection;
+        this.extending = extending;
+        if (extending) {
+            this.pushDirection = pistonDirection;
+            this.startPos = pistonPos.relative(pistonDirection);
         } else {
-            this.pushDirection = p_60420_.getOpposite();
-            this.startPos = p_60419_.relative(p_60420_, 2);
+            this.pushDirection = pistonDirection.getOpposite();
+            this.startPos = pistonPos.relative(pistonDirection, 2);
         }
     }
 
@@ -52,11 +52,7 @@ public class PistonStructureResolver {
             } else {
                 return false;
             }
-        } else if (this.extending && blockstate.getPistonPushReaction() == PushReaction.DESTROY) {
-            return true;
-        } else {
-            return false;
-        }
+        } else return this.extending && blockstate.getPistonPushReaction() == PushReaction.DESTROY;
     }
 
     private boolean addBlockLine(BlockPos targetPos, Direction dir) {
@@ -70,7 +66,7 @@ public class PistonStructureResolver {
         } else if (this.toPush.contains(targetPos)) {
             return true;
         } else {
-            if (1 + this.toPush.size() > 12) {
+            if (1 + this.toPush.size() > MAX_PUSH_DEPTH) {
                 return false;
             } else {
                 int havePushed = 1;
@@ -87,7 +83,7 @@ public class PistonStructureResolver {
                     }
 
                     ++havePushed;
-                    if (havePushed + this.toPush.size() > 12) {
+                    if (havePushed + this.toPush.size() > MAX_PUSH_DEPTH) {
                         return false;
                     }
                 }
@@ -107,7 +103,9 @@ public class PistonStructureResolver {
                     if (posIndex > -1) {
                         this.reorderListAtCollision(l, posIndex);
 
-                        return IntStream.rangeClosed(0, posIndex + l).mapToObj(this.toPush::get).noneMatch(blockpos2 -> this.level.getBlockState(blockpos2).isStickyBlock() && !this.addBranchingBlocks(blockpos2));
+                        return IntStream.rangeClosed(0, posIndex + l)
+                                .mapToObj(this.toPush::get)
+                                .noneMatch(blockpos2 -> this.level.getBlockState(blockpos2).isStickyBlock() && !this.addBranchingBlocks(blockpos2));
                     }
 
                     targetState = this.level.getBlockState(currentPos);
@@ -123,7 +121,7 @@ public class PistonStructureResolver {
                         return true;
                     }
 
-                    if (this.toPush.size() >= 12) {
+                    if (this.toPush.size() >= MAX_PUSH_DEPTH) {
                         return false;
                     }
 

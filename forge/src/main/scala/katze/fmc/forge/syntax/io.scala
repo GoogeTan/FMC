@@ -62,7 +62,7 @@ object io:
   end updateBlockAt
   
   given PropertyAccess[IO, Level] with
-    override def updatePropertyAt[T <: Comparable[T]](level: Level, pos: BlockPos, property: Property[T], newValue: T): IO[Option[T]] =
+    override def updatePropertyAt[T](level: Level, pos: BlockPos, property: Property[T], newValue: T): IO[Option[T]] =
       updateBlockAt(
         level,
         pos,

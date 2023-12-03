@@ -4,6 +4,7 @@ import katze.fmc.Direction.*
 import katze.fmc.{ BlockPos, Direction, ResourceLocation }
 import katze.fmc.block.state.*
 import katze.fmc.block.*
+import katze.fmc.block.action.*
 import katze.fmc.data.*
 import katze.fmc.syntax.show.{ javaBoolShow, showDirection }
 import katze.fmc.data.*
@@ -16,6 +17,7 @@ import scala.collection.Set
 
 val extendedProperty = setProperty("extended", Set(true, false))
 val directionProperty = setProperty("direction", Direction.allValues.toSet)
+val age = setProperty("age", Set(1, 2, 3, 4))
 
 def pistonBaseBlock[F[_] : Ap, Level](settings : BlockSettings) : BlockPrototype[F, Level] =
   blockPrototype(
@@ -27,7 +29,8 @@ end pistonBaseBlock
 def updatePistonBeingExtended[
                               F[_]
                                 : Monad
-                                : BlockPistonPushReaction,
+                                : PistonBlockTypes
+                                : BlockTypes,
                               Level
                                 : RedstoneView[F, _]
                                 : BlockView[F, _]
@@ -50,7 +53,8 @@ end updatePistonBeingExtended
 def tryExtendPiston[
                       F[_]
                         : Monad
-                        : BlockPistonPushReaction,
+                        : PistonBlockTypes
+                        : BlockTypes,
                       Level
                         : BlockView[F, _]
                         : LevelBounds[F, _]
@@ -69,21 +73,20 @@ end tryExtendPiston
 def unextendPiston[F[_] , Level](level : Level, pos : BlockPos, direction : Direction) : F[Unit] = ???
 
 def isPistonPowered[F[_] : Monad, Level : RedstoneView[F, _]](level : Level, pos : BlockPos, side : Direction) : F[Boolean] =
-  for
-    sides <- isEmittingPowerAtSides(level, pos, Direction.allValues.filter(_ != side))
-    hasPowerDown <-isEmittingRedstonePower(level, pos, Down)
-    hasPowerAtTop <- isEmittingPowerAtSides(level, pos.up, Direction.allValues.filter(_ != Down)) // TODO Хорошо разобраться в алгосе и дать норм имена. А то тут не очевидно
-  yield sides || hasPowerDown || hasPowerAtTop
+  isEmittingRedstonePowerAtSides(level, pos, Direction.allValues.filter(_ != side))
+    || isEmittingRedstonePower(level, pos, Down)
+    || isEmittingRedstonePowerAtSides(level, pos.up, Direction.allValues.filter(_ != Down)) // TODO проверить читаемость и поправить
 end isPistonPowered
 
-def isEmittingPowerAtSides[F[_] : Ap, Level : RedstoneView[F, _]](level : Level, pos : BlockPos, sides : List[Direction]) : F[Boolean] =
+def isEmittingRedstonePowerAtSides[F[_] : Ap, Level : RedstoneView[F, _]](level : Level, pos : BlockPos, sides : List[Direction]) : F[Boolean] =
   sides.traverse(dir => isEmittingRedstonePower(level, pos.relative(dir), dir)) >>* (_.contains(true))
-end isEmittingPowerAtSides
+end isEmittingRedstonePowerAtSides
 
 def canPistonMoveBlockTowardsDirection[
                                         F[_]
                                           : Monad
-                                          : BlockPistonPushReaction,
+                                          : PistonBlockTypes
+                                          : BlockTypes,
                                         Level
                                           : LevelBounds[F, _]
                                       ](
@@ -101,7 +104,7 @@ def canPistonMoveBlockTowardsDirection[
     && (isAir(targetsBlockState) || isBlockMovable(targetsBlockState, moveDirection, canPistonBreakBlocks, pistonDirection))
 end canPistonMoveBlockTowardsDirection
 
-private def isBlockMovable[F[_] : Monad : BlockPistonPushReaction](blockState : BlockState, direction: Direction, canBreak: Boolean, pistonDir: Direction) : F[Boolean] =
+private def isBlockMovable[F[_] : Monad : PistonBlockTypes : BlockTypes](blockState : BlockState, direction: Direction, canBreak: Boolean, pistonDir: Direction) : F[Boolean] =
   blockPistonPushReaction(blockState.block) >>= {
     case PistonPushReaction.Block => pure(false)
     case PistonPushReaction.Destroy => pure(canBreak)
@@ -110,8 +113,8 @@ private def isBlockMovable[F[_] : Monad : BlockPistonPushReaction](blockState : 
   }
 end isBlockMovable
 
-private def isExtendedPiston[F[_] : Monad : BlockPistonPushReaction](state : BlockState) : F[Boolean] =
-  isPistonBlock(state) && valueFromState(state, extendedProperty).getOrElse(FALSE)
+private def isExtendedPiston[F[_] : Monad : PistonBlockTypes](state : BlockState) : F[Boolean] =
+  isPistonBlock(state) && valueFromState(state, extendedProperty).getOrElse(false)
 end isExtendedPiston
 
 private def staysInWorldBounds[F[_] : Ap, Level : LevelBounds[F, _]](level : Level, pos : BlockPos, pushDirection : Direction) : F[Boolean] =

@@ -43,16 +43,16 @@ object show:
     "["
       + join(", ",
           foldP(a, List[String]())(
-            [T <: Comparable[T]] =>
+            [T] =>
               (res : List[String], prop : Property[T], value : T) =>
                 s"${prop.name} -> ${prop.values.valueOf(value)}" :: res
           )
         )
       + "]"
 
-  given shortPropertyShow[T <: Comparable[T]]: Show[Property[T]] = a => s"Property(${a.name})"
+  given shortPropertyShow[T]: Show[Property[T]] = a => s"Property(${a.name})"
 
-  given longPropertyShow[T <: Comparable[T]]: Show[Property[T]] = a => s"Property(name=${a.name}, values=${join(",", a.values.map(_._2).toList)}))"
+  given longPropertyShow[T]: Show[Property[T]] = a => s"Property(name=${a.name}, values=${join(",", a.values.map(_._2).toList)}))"
   
   given showDirection : Show[Direction] = _.toString.toLowerCase
 end show

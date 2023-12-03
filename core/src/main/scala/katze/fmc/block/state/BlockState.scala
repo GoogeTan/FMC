@@ -23,7 +23,7 @@ end defaultStateOf
  * Обновляет состояние проперти
  * @return Some, если у блока есть данная проперти, иначе None
  */
-def withValue[T <: Comparable[T]](state : BlockState, property: Property[T], value: T) : Option[BlockState] =
+def withValue[T](state : BlockState, property: Property[T], value: T) : Option[BlockState] =
   if block.state.valueOf(state.properties, property).isDefined then
     Some(BlockState(state.block, withValueFor(state.properties, property, value)))
   else
@@ -33,12 +33,12 @@ end withValue
 
 def withProperties(blockState : BlockState, properties: Properties) : Option[BlockState] =
   foldP(properties, Option(blockState))(
-    [T <: Comparable[T]] =>
+    [T] =>
       (result: Option[BlockState], property: Property[T], value: T) =>
         result.flatMap(withValue(_, property, value))
   )
 end withProperties
 
-def valueFromState[T <: Comparable[T]](state: BlockState, property: Property[T]) : Option[T] =
+def valueFromState[T](state: BlockState, property: Property[T]) : Option[T] =
   block.state.valueOf(state.properties, property)
 end valueFromState
