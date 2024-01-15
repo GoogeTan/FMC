@@ -37,38 +37,46 @@ object io:
     end updateBlockAt
     
     override def updateBlockAt_(level: Level, position: BlockPos, withNewState: BlockState): IO[Unit] =
-      IO.Dirt(() => level.setBlockAndUpdate(position, asVanila(withNewState)))
+      IO:
+        level.setBlockAndUpdate(position, asVanila(withNewState))
     end updateBlockAt_
   end given
   
   given LevelBounds[IO, Level] with
     override def height(level: Level): IO[Int :| Positive] =
-      IO.Dirt(() => level.dimensionType().height())
+      IO:
+        level.dimensionType().height()
     end height
     
     override def maxY(level: Level): IO[Int] =
-      IO.Dirt(() => level.getMaxBuildHeight)
+      IO:
+        level.getMaxBuildHeight
     end maxY
     
     override def minY(level: Level): IO[Int] =
-      IO.Dirt(() => level.dimensionType().minY())
+      IO:
+        level.dimensionType().minY()
     end minY
     
     override def isWithinBorderBounds(level: Level, pos: BlockPos): IO[Boolean] =
-      IO.Dirt(() => level.getWorldBorder.isWithinBounds(pos))
+      IO:
+        level.getWorldBorder.isWithinBounds(pos)
     end isWithinBorderBounds
   end given
 
   given RedstoneView[IO, SignalGetter] with
     override def strongRedstonePower(level: SignalGetter, pos: BlockPos, direction: Direction): IO[RedstoneSignal] =
-      IO.Dirt(() => level.getDirectSignal(pos, direction).refine)
+      IO:
+        level.getDirectSignal(pos, direction).refine
     
     override def receivedStrongRedstonePower(level: SignalGetter, pos: BlockPos): IO[RedstoneSignal] =
-      IO.Dirt(() => level.getBestNeighborSignal(pos).refine)
+      IO:
+        level.getBestNeighborSignal(pos).refine
     end receivedStrongRedstonePower
     
     override def emittedRedstonePower(level: SignalGetter, pos: BlockPos, direction: Direction): IO[RedstoneSignal] =
-      IO.Dirt(() => level.getDirectSignal(pos, direction).refine)
+      IO:
+        level.getDirectSignal(pos, direction).refine
     end emittedRedstonePower
   end given
 end io

@@ -16,7 +16,7 @@ def blockPrototype[F[_], Level](using Ap[F])(
                                                 defaultProperties: Properties,
                                                 neighborUpdatedReaction: NeighborUpdatedReaction[F, Level] = NoNeighborUpdatedReaction[F],
                                                 stateForPlacement: PlacementState[F, Level] = DefaultPlacementState[F]
-                                             ) : BlockPrototype[F, Level] =
+                                              ) : BlockPrototype[F, Level] =
   BlockPrototype(
     settings,
     defaultProperties,
