@@ -26,7 +26,8 @@ object io:
     end blockPropertiesAt
     
     override def blockStateAt(level: Level, pos: BlockPos): IO[BlockState] =
-      IO.Dirt(() => {asFmcBlockState(level.getBlockState(pos))})
+      IO:
+        asFmcBlockState(level.getBlockState(pos))
     end blockStateAt
     
     override def updateBlockAt(level: Level, position: BlockPos, withNewState: BlockState): IO[BlockState] =
