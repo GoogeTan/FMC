@@ -8,6 +8,12 @@ trait Monad[F[_]] extends FMap[F] with MMap[F] with Ap[F]:
   end apply
 end Monad
 
+extension[F[_], T] (value : F[T])(using monad : Monad[F])
+  def flatMap[B](func : T => F[B]) : F[B] =
+    monad.mmap(value)(func)
+  end flatMap
+end extension
+
 extension[F[_] : Monad](value : F[Boolean])
   def ||(another : F[Boolean]) : F[Boolean] =
     value >>= (x => if (x) pure(true) else another)

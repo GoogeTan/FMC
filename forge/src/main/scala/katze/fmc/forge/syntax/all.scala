@@ -1,13 +1,15 @@
 package katze.fmc.forge.syntax
 
+import katze.fmc.forge
+
 object all:
   export katze.fmc.syntax.all.{*, given}
-  export katze.fmc.forge.syntax.block.{ *, given }
-  export katze.fmc.forge.syntax.blockpos.{ *, given }
-  export katze.fmc.forge.syntax.blockstate.{ *, given }
-  export katze.fmc.forge.syntax.direction.{ *, given }
-  export katze.fmc.forge.syntax.io.{ *, given }
-  export katze.fmc.forge.syntax.property.{ *, given }
-  export katze.fmc.forge.syntax.resource.{ *, given }
+  export forge.syntax.block.{ *, given }
+  export forge.syntax.blockpos.{ *, given }
+  export forge.syntax.blockstate.{ *, given }
+  export forge.syntax.direction.{ *, given }
+  export forge.syntax.io.{ *, given }
+  export forge.syntax.property.{ *, given }
+  export forge.syntax.resource.{ *, given }
 end all
 

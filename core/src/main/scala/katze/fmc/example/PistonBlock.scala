@@ -1,25 +1,20 @@
 package katze.fmc.example
 
 import katze.fmc.Direction.*
-import katze.fmc.{ BlockPos, Direction, ResourceLocation }
-import katze.fmc.block.state.*
 import katze.fmc.block.*
 import katze.fmc.block.action.*
-import katze.fmc.data.*
-import katze.fmc.syntax.show.{ javaBoolShow, showDirection }
+import katze.fmc.block.state.*
 import katze.fmc.data.*
 import katze.fmc.example.PistonPushReaction.*
 import katze.fmc.level.*
 import katze.fmc.syntax.all.{ *, given }
+import katze.fmc.{ BlockPos, Direction }
 
-import java.lang.Boolean.{ FALSE, TRUE }
-import scala.collection.Set
-
-val extendedProperty = setProperty("extended", Set(true, false))
-val directionProperty = setProperty("direction", Direction.allValues.toSet)
-val age = setProperty("age", Set(1, 2, 3, 4))
-
-def pistonBaseBlock[F[_] : Ap, Level](settings : BlockSettings) : BlockPrototype[F, Level] =
+def pistonBaseBlock[F[_] : Ap, Level](
+                                       settings : BlockSettings,
+                                       extendedProperty : Property[Boolean],
+                                       directionProperty : Property[Direction]
+                                     ) : BlockPrototype[F, Level] =
   blockPrototype(
     settings,
     noProperties ++ (extendedProperty -> false) ++ (directionProperty -> Direction.West)
@@ -35,14 +30,20 @@ def updatePistonBeingExtended[
                                 : RedstoneView[F, _]
                                 : BlockView[F, _]
                                 : LevelBounds[F, _]
-                              ](level : Level, pos : BlockPos, state : BlockState) : F[Unit] =
+                              ](
+                                                              level : Level,
+                                                              pos : BlockPos,
+                                                              state : BlockState,
+                                                              extendedProperty : Property[Boolean],
+                                                              directionProperty : Property[Direction]
+                                                            ) : F[Unit] =
   val pistonOrientation = valueFromState(state, directionProperty).get
   val extended = valueFromState(state, extendedProperty).get
   for
     shouldBeExtended <- isPistonPowered(level, pos, pistonOrientation)
     _ <-
       if (shouldBeExtended && !extended)
-        tryExtendPiston(level, pos, pistonOrientation)
+        tryExtendPiston(level, pos, pistonOrientation, extendedProperty)
       else if (!shouldBeExtended && extended)
         unextendPiston(level, pos, pistonOrientation)
       else
@@ -61,12 +62,13 @@ def tryExtendPiston[
                     ](
                         level : Level,
                         pos : BlockPos,
-                        direction : Direction
+                        direction : Direction,
+                        extendedProperty : Property[Boolean]
                      ) : F[Unit] =
   val targetPos = pos.relative(direction)
   for
     targetState <- blockStateAt(level, targetPos)
-    canMove <- canPistonMoveBlockTowardsDirection(targetState, level, targetPos, direction, true, direction) // TODO доделать это чудо
+    canMove <- canPistonMoveBlockTowardsDirection(targetState, level, targetPos, direction, true, direction, extendedProperty) // TODO доделать это чудо
   yield ()
 end tryExtendPiston
 
@@ -95,12 +97,13 @@ def canPistonMoveBlockTowardsDirection[
                                          targetPos : BlockPos,
                                          moveDirection : Direction,
                                          canPistonBreakBlocks : Boolean,
-                                         pistonDirection : Direction
+                                         pistonDirection : Direction, 
+                                         extendedProperty : Property[Boolean]
                                        ) : F[Boolean] =
   staysInWorldBounds(level, targetPos, moveDirection)
     && !isMadeOfObsidian(targetsBlockState)
     && !isUnbreakable(targetsBlockState)
-    && !isExtendedPiston(targetsBlockState)
+    && !isExtendedPiston(targetsBlockState, extendedProperty)
     && (isAir(targetsBlockState) || isBlockMovable(targetsBlockState, moveDirection, canPistonBreakBlocks, pistonDirection))
 end canPistonMoveBlockTowardsDirection
 
@@ -113,7 +116,7 @@ private def isBlockMovable[F[_] : Monad : PistonBlockTypes : BlockTypes](blockSt
   }
 end isBlockMovable
 
-private def isExtendedPiston[F[_] : Monad : PistonBlockTypes](state : BlockState) : F[Boolean] =
+private def isExtendedPiston[F[_] : Monad : PistonBlockTypes](state : BlockState, extendedProperty : Property[Boolean]) : F[Boolean] =
   isPistonBlock(state) && valueFromState(state, extendedProperty).getOrElse(false)
 end isExtendedPiston
 

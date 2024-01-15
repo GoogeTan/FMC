@@ -8,24 +8,31 @@ import katze.fmc.syntax.show.given
 
 import scala.collection.Set
 
-final case class Property[T : Ordering](name : String, values : BiMap[T, String])(using val clazz : ClassTag[T]):
+sealed trait Property[T](using val clazz : Class[T]):
+  val name : String
+  val values : BiMap[T, String]
+end Property
+
+final case class CaseProperty[T <: Comparable[T] : Class](
+                                                            override val name : String,
+                                                            override val values : BiMap[T, String]
+                                                          ) extends Property[T]:
   override def toString: String =
     katze.fmc.syntax.show.longPropertyShow.show(this)
   end toString
-end Property
-
+end CaseProperty
 
 def intProperty(name : String, from : Int, to : Int) : Property[Integer] =
-  setProperty(name, (from to to).map(a => a.asInstanceOf[Integer]).toSet)
+  setProperty(name, (from to to).map(Integer.valueOf).toSet)
 end intProperty
 
-def setProperty[T : ClassTag : Show : Ordering](name : String, possibleValues : scala.collection.Set[T]) : Property[T] =
-  Property(
+def setProperty[T <: Comparable[T] : Show : Ordering : ClassTag](name : String, possibleValues : scala.collection.Set[T]) : Property[T] =
+  CaseProperty(
     name = name,
     values = ListBiMap(
       possibleValues.map(i => (i, show(i))).toList
     ).get
-  )
+  )(using classTag[T].runtimeClass.asInstanceOf)
 end setProperty
 
 def isValidFor[T](property: Property[T], value : T) : Boolean =

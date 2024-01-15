@@ -26,6 +26,11 @@ def foldP[R](properties: Properties, initial : R)(func : [T] => (R, Property[T],
   properties.values.iterator.foldLeft(initial)((res, propertyValue) => func(res, propertyValue._1, propertyValue._2.asInstanceOf))
 end foldP
 
+def foldPC[R](properties: Properties, initial: R)(func: [T <: Comparable[T]] => (R, Property[T], T) => R): R =
+  properties.values.iterator.foldLeft(initial)((res, propertyValue) => func(res, propertyValue._1.asInstanceOf, propertyValue._2.asInstanceOf))
+end foldPC
+
+
 def valueOf[T](properties: Properties, property: Property[T]) : Option[T] =
   properties.values.get(property).map(_.asInstanceOf[T])
 end valueOf

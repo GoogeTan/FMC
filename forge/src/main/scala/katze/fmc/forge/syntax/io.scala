@@ -1,7 +1,7 @@
 package katze.fmc.forge.syntax
 
 import katze.fmc.data.Monad
-import katze.fmc.level.{ BlockView, LevelBounds, PropertyAccess, RedstoneSignal, RedstoneView }
+import katze.fmc.level.{ BlockAccess, BlockView, LevelBounds, RedstoneSignal, RedstoneView, updateBlockAt }
 import katze.fmc.{ BlockPos, Direction }
 import katze.fmc.block.*
 import katze.fmc.block.state.*
@@ -17,7 +17,7 @@ object io:
     override def pure[T](value: T): IO[T] = IO.Pure(value)
   end given
   
-  given BlockView[IO, Level] with
+  given BlockAccess[IO, Level] with
     override def blockAt(level: Level, pos: BlockPos): IO[BlockRegistryEntry] =
       blockStateAt(level, pos) >>* (_.block)
     
@@ -28,8 +28,18 @@ object io:
     override def blockStateAt(level: Level, pos: BlockPos): IO[BlockState] =
       IO.Dirt(() => {asFmcBlockState(level.getBlockState(pos))})
     end blockStateAt
+    
+    override def updateBlockAt(level: Level, position: BlockPos, withNewState: BlockState): IO[BlockState] =
+      for
+        old <- blockStateAt(level, position)
+        _ <- updateBlockAt_(level, position, withNewState)
+      yield old
+    end updateBlockAt
+    
+    override def updateBlockAt_(level: Level, position: BlockPos, withNewState: BlockState): IO[Unit] =
+      IO.Dirt(() => level.setBlockAndUpdate(position, asVanila(withNewState)))
+    end updateBlockAt_
   end given
-  
   
   given LevelBounds[IO, Level] with
     override def height(level: Level): IO[Int :| Positive] =
@@ -48,31 +58,10 @@ object io:
       IO.Dirt(() => level.getWorldBorder.isWithinBounds(pos))
     end isWithinBorderBounds
   end given
-  
-  def updateBlockAt(level : Level, pos : BlockPos, f : BlockState => Option[BlockState]) : IO[Option[BlockState]] =
-    IO.Dirt(() =>
-      val oldState = asFmcBlockState(level.getBlockState(pos))
-      f(oldState) match
-        case Some(newState) =>
-          level.setBlockAndUpdate(pos, asVanila(newState))
-          Some(oldState)
-        case None => None
-      end match
-    )
-  end updateBlockAt
-  
-  given PropertyAccess[IO, Level] with
-    override def updatePropertyAt[T](level: Level, pos: BlockPos, property: Property[T], newValue: T): IO[Option[T]] =
-      updateBlockAt(
-        level,
-        pos,
-        withValue(_, property, newValue)
-      ) >>* (_.flatMap(valueFromState[T](_ : BlockState, property)))
-    end updatePropertyAt
-  end given
-  
+
   given RedstoneView[IO, SignalGetter] with
-    override def strongRedstonePower(level: SignalGetter, pos: BlockPos, direction: Direction): IO[RedstoneSignal] = ???
+    override def strongRedstonePower(level: SignalGetter, pos: BlockPos, direction: Direction): IO[RedstoneSignal] =
+      IO.Dirt(() => level.getDirectSignal(pos, direction).refine)
     
     override def receivedStrongRedstonePower(level: SignalGetter, pos: BlockPos): IO[RedstoneSignal] =
       IO.Dirt(() => level.getBestNeighborSignal(pos).refine)

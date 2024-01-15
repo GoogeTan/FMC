@@ -5,17 +5,6 @@ import katze.fmc.typing.{ Id, Inner }
 import katze.fmc.data.traverse
 
 object monad:
-  extension[F[_], T] (value : F[T])(using monad : Monad[F])
-    def flatMap[B](func : T => F[B]) : F[B] =
-      monad.mmap(value)(func)
-    end flatMap
-
-
-    def map[B](func : T => B) : F[B] =
-      monad.fmap(value)(func)
-    end map
-  end extension
-  
   object all:
     export option.{*, given}
     export either.{*, given}
