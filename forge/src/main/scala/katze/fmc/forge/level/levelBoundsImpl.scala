@@ -5,12 +5,15 @@ import katze.fmc.BlockPos
 import katze.fmc.forge.IO
 import katze.fmc.level.LevelBounds
 import net.minecraft.world.level.Level
-import katze.fmc.forge.syntax.all.{*, given }
+import io.github.iltotore.iron.{*, given}
+import katze.fmc.forge.syntax.io.{*, given}
+import katze.fmc.forge.syntax.blockpos.{*, given}
 
 given levelBoundsImpl: LevelBounds[IO, Level] with
   override def height(level: Level): IO[Int :| Positive] =
     IO:
-      level.dimensionType().height().refine()
+      val height : Int = level.dimensionType().height()
+      height.refine
   end height
   
   override def maxY(level: Level): IO[Int] =
