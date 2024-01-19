@@ -5,7 +5,8 @@ enum IO[T]:
   case Dirt(value : () => T)
   case FlatMap[A, B](prev : IO[A], func : A => IO[B]) extends IO[B]
   
-  def runUnsafe : T = this match
+  @annotation.tailrec
+  final def runUnsafe : T = this match
     case IO.FlatMap(prev, func) => func(prev.runUnsafe).runUnsafe
     case IO.Pure(value) => value
     case IO.Dirt(value) => value()
