@@ -4,7 +4,7 @@ import io.github.iltotore.iron.constraint.all.Positive
 import io.github.iltotore.iron.{ *, given }
 import katze.fmc.BlockPos
 
-trait LevelBounds[F[_], Level]:
+trait LevelBounds[+F[_], -Level]:
   def height(level : Level): F[Int :| Positive]
   def minY(level : Level): F[Int]
 

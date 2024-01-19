@@ -11,10 +11,10 @@ import katze.fmc.syntax.all.{ *, given }
 import katze.fmc.{ BlockPos, Direction }
 
 def pistonBaseBlock[F[_] : Ap, Level](
-                                       settings : BlockSettings,
-                                       extendedProperty : Property[Boolean],
-                                       directionProperty : Property[Direction]
-                                     ) : BlockPrototype[F, Level] =
+                                        settings : BlockSettings,
+                                        extendedProperty : Property[Boolean],
+                                        directionProperty : Property[Direction]
+                                      ) : BlockPrototype[F, Level] =
   blockPrototype(
     settings,
     noProperties ++ (extendedProperty -> false) ++ (directionProperty -> Direction.West)
@@ -31,15 +31,15 @@ def updatePistonBeingExtended[
                                 : BlockView[F, _]
                                 : LevelBounds[F, _]
                               ](
-                                                              level : Level,
-                                                              pos : BlockPos,
-                                                              state : BlockState,
-                                                              extendedProperty : Property[Boolean],
-                                                              directionProperty : Property[Direction]
-                                                            ) : F[Unit] =
-  val pistonOrientation = valueFromState(state, directionProperty).get
-  val extended = valueFromState(state, extendedProperty).get
+                                level : Level,
+                                pos : BlockPos,
+                                state : BlockState,
+                                extendedProperty : Property[Boolean],
+                                directionProperty : Property[Direction]
+                              )(using T : Throws[F, String]) : F[Unit] =
   for
+    pistonOrientation <- T.expect(valueFromState(state, directionProperty), "updatePistonBeingExtended: The piston must have an direction property.")
+    extended <- T.expect(valueFromState(state, extendedProperty), "updatePistonBeingExtended: The piston must have an extension property.")
     shouldBeExtended <- isPistonPowered(level, pos, pistonOrientation)
     _ <-
       if (shouldBeExtended && !extended)
@@ -64,7 +64,7 @@ def tryExtendPiston[
                         pos : BlockPos,
                         direction : Direction,
                         extendedProperty : Property[Boolean]
-                     ) : F[Unit] =
+                      ) : F[Unit] =
   val targetPos = pos.relative(direction)
   for
     targetState <- blockStateAt(level, targetPos)
@@ -92,14 +92,14 @@ def canPistonMoveBlockTowardsDirection[
                                         Level
                                           : LevelBounds[F, _]
                                       ](
-                                         targetsBlockState : BlockState,
-                                         level : Level,
-                                         targetPos : BlockPos,
-                                         moveDirection : Direction,
-                                         canPistonBreakBlocks : Boolean,
-                                         pistonDirection : Direction, 
-                                         extendedProperty : Property[Boolean]
-                                       ) : F[Boolean] =
+                                          targetsBlockState : BlockState,
+                                          level : Level,
+                                          targetPos : BlockPos,
+                                          moveDirection : Direction,
+                                          canPistonBreakBlocks : Boolean,
+                                          pistonDirection : Direction,
+                                          extendedProperty : Property[Boolean]
+                                        ) : F[Boolean] =
   staysInWorldBounds(level, targetPos, moveDirection)
     && !isMadeOfObsidian(targetsBlockState)
     && !isUnbreakable(targetsBlockState)

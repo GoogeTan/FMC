@@ -14,7 +14,7 @@ def mmapi[F[_] : Monad, G[_] : Monad : Swap, A, B](value : F[G[A]])(func : A => 
   katze.fmc.syntax.monad.inner.innerMonad[F, G].mmap(value)(func)
 end mmapi
 
-extension[F[_], T] (value: F[T])(using monad: Monad[F])
+extension[F[_], T] (value: F[T])(using monad: MMap[F])
   @targetName("mmapOperator")
   def >>=[B](func: T => F[B]): F[B] =
     monad.mmap(value)(func)

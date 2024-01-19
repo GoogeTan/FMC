@@ -16,68 +16,7 @@ object io:
     
     override def pure[T](value: T): IO[T] = IO.Pure(value)
   end given
-  
-  given BlockAccess[IO, Level] with
-    override def blockAt(level: Level, pos: BlockPos): IO[BlockRegistryEntry] =
-      blockStateAt(level, pos) >>* (_.block)
-    
-    override def blockPropertiesAt(level: Level, pos: BlockPos): IO[Properties] =
-      blockStateAt(level, pos) >>* (_.properties)
-    end blockPropertiesAt
-    
-    override def blockStateAt(level: Level, pos: BlockPos): IO[BlockState] =
-      IO:
-        asFmcBlockState(level.getBlockState(pos))
-    end blockStateAt
-    
-    override def updateBlockAt(level: Level, position: BlockPos, withNewState: BlockState): IO[BlockState] =
-      for
-        old <- blockStateAt(level, position)
-        _ <- updateBlockAt_(level, position, withNewState)
-      yield old
-    end updateBlockAt
-    
-    override def updateBlockAt_(level: Level, position: BlockPos, withNewState: BlockState): IO[Unit] =
-      IO:
-        level.setBlockAndUpdate(position, asVanila(withNewState))
-    end updateBlockAt_
-  end given
-  
-  given LevelBounds[IO, Level] with
-    override def height(level: Level): IO[Int :| Positive] =
-      IO:
-        level.dimensionType().height()
-    end height
-    
-    override def maxY(level: Level): IO[Int] =
-      IO:
-        level.getMaxBuildHeight
-    end maxY
-    
-    override def minY(level: Level): IO[Int] =
-      IO:
-        level.dimensionType().minY()
-    end minY
-    
-    override def isWithinBorderBounds(level: Level, pos: BlockPos): IO[Boolean] =
-      IO:
-        level.getWorldBorder.isWithinBounds(pos)
-    end isWithinBorderBounds
-  end given
-
-  given RedstoneView[IO, SignalGetter] with
-    override def strongRedstonePower(level: SignalGetter, pos: BlockPos, direction: Direction): IO[RedstoneSignal] =
-      IO:
-        level.getDirectSignal(pos, direction).refine
-    
-    override def receivedStrongRedstonePower(level: SignalGetter, pos: BlockPos): IO[RedstoneSignal] =
-      IO:
-        level.getBestNeighborSignal(pos).refine
-    end receivedStrongRedstonePower
-    
-    override def emittedRedstonePower(level: SignalGetter, pos: BlockPos, direction: Direction): IO[RedstoneSignal] =
-      IO:
-        level.getDirectSignal(pos, direction).refine
-    end emittedRedstonePower
-  end given
+  export katze.fmc.forge.level.blockAccessImpl
+  export katze.fmc.forge.level.levelBoundsImpl
+  export katze.fmc.forge.level.redstoneViewImpl
 end io

@@ -18,6 +18,18 @@ final case class Properties private[fmc] (private[block] val values : Map[Proper
   def ::[T](keyValuePair: (Property[T], T)): Properties =
     withValueFor(this, keyValuePair._1, keyValuePair._2)
   end ::
+  
+  def foldP[R](initial: R)(func: [T] => (R, Property[T], T) => R): R =
+    values.iterator.foldLeft(initial)((res, propertyValue) => func(res, propertyValue._1, propertyValue._2.asInstanceOf))
+  end foldP
+  
+  def foldPC[R](initial: R)(func: [T <: Comparable[T]] => (R, Property[T], T) => R): R =
+    values.iterator.foldLeft(initial)((res, propertyValue) => func(res, propertyValue._1.asInstanceOf, propertyValue._2.asInstanceOf))
+  end foldPC
+  
+  def mapP[R](func: [T <: Comparable[T]] => (Property[T], T) => R): List[R] =
+    foldPC(List[R]())([T <: Comparable[T]] => (result: List[R], property: Property[T], value: T) => func(property, value) :: result)
+  end mapP
 end Properties
 
 def noProperties : Properties = Properties(Map())
@@ -29,6 +41,10 @@ end foldP
 def foldPC[R](properties: Properties, initial: R)(func: [T <: Comparable[T]] => (R, Property[T], T) => R): R =
   properties.values.iterator.foldLeft(initial)((res, propertyValue) => func(res, propertyValue._1.asInstanceOf, propertyValue._2.asInstanceOf))
 end foldPC
+
+def mapP[R](properties: Properties)(func : [T <: Comparable[T]] => (Property[T], T) => R) : List[R] =
+  foldPC(properties, List[R]())([T <: Comparable[T]]=> (result : List[R], property : Property[T], value : T) => func(property, value) :: result)
+end mapP
 
 
 def valueOf[T](properties: Properties, property: Property[T]) : Option[T] =

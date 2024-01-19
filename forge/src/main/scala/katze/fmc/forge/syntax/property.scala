@@ -11,6 +11,14 @@ object property:
   val test: FmcProperty[Integer] = katze.fmc.block.state.intProperty("aba", 1, 10)
   val vanila : VanilaProperty[Integer] = asVanilaProperty[Integer](test)
   
+  extension[T <: Comparable[T]] (value: FmcProperty[T])
+    def asVanila: VanilaProperty[T] = asVanilaProperty(value)
+  end extension
+  
+  extension[T <: Comparable[T]]  (value: VanilaProperty[T])
+    def asFmc: FmcProperty[T] = asFmcProperty(value)
+  end extension
+  
   def asVanilaProperty[T <: Comparable[T]](propertyIn: FmcProperty[T]) : VanilaProperty[T] =
     propertyIn match
       case CaseProperty(_, map: PropertyBiMap[?]) => map.property

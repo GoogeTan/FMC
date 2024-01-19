@@ -11,7 +11,7 @@ import katze.fmc.{ BlockPos, Direction }
  */
 type RedstoneSignal = Int :| ClosedOpen[0, 16]
 
-trait RedstoneView[F[_], Level]:
+trait RedstoneView[+F[_], -Level]:
   def strongRedstonePower(level: Level, pos: BlockPos, direction: Direction) : F[RedstoneSignal]
   
   /**

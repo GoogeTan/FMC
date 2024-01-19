@@ -10,7 +10,7 @@ import katze.fmc.syntax.all.{*, given}
  *
  * @tparam F Эффект
  */
-trait BlockAccess[F[_], Level] extends BlockView[F, Level]:
+trait BlockAccess[+F[_], -Level] extends BlockView[F, Level]:
   def updateBlockAt(level : Level, position: BlockPos, withNewState: BlockState): F[BlockState]
   def updateBlockAt_(level : Level, position: BlockPos, withNewState: BlockState): F[Unit]
 end BlockAccess

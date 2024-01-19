@@ -14,18 +14,19 @@ object blockstate:
     new Properties(properties)
   end asProperties
   
-  private def convert[T <: Comparable[T]](property : VanilaProperty[T], state : VanilaBlockState): (FmcProperty[T], T) =
-    (asFmcProperty(property), state.getValue(property))
-  end convert
+  def convert[T <: Comparable[T]](property: VanilaProperty[T], blockState: VanilaBlockState): (FmcProperty[T], T) =
+    (asFmcProperty(property), blockState.getValue(property))
+  extension (value : FmcBlockState)
+    def asVanila : VanilaBlockState = asVanilaState(value)
+  end extension
   
+  extension (value: VanilaBlockState)
+    def asFmc: FmcBlockState = asFmcBlockState(value)
+  end extension
   
-  def asVanila(blockState: FmcBlockState): VanilaBlockState =
-    foldPC[VanilaBlockState](blockState.properties, block.asVanilaBlock(blockState.block).defaultBlockState())(
-      [T <: Comparable[T]] =>
-        (state : VanilaBlockState, property : FmcProperty[T], value : T) =>
-          state.setValue(asVanilaProperty(property), value)
-    )
-  end asVanila
+  def asVanilaState(blockState: FmcBlockState): VanilaBlockState =
+    block.asVanilaBlock(blockState.block).defaultBlockState().withProperties(blockState.properties)
+  end asVanilaState
   
   def asFmcBlockState(state: VanilaBlockState): FmcBlockState =
     val block = asFmcBlock(state.getBlock)
@@ -35,4 +36,12 @@ object blockstate:
     val value : T = oldState.getValue(property)
     withValue(blockState, asFmcProperty(property), value).get
   end withVanilaProperty
+  
+  extension (vanila : VanilaBlockState)
+    def withProperties(properties: Properties) : VanilaBlockState =
+      foldPC(properties, vanila)(
+        [T <: Comparable[T]] =>
+          (state : VanilaBlockState, property : FmcProperty[T], value : T) =>
+            state.setValue(asVanilaProperty(property), value)
+      )
 end blockstate

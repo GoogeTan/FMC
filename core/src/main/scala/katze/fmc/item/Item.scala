@@ -1,6 +1,11 @@
 package katze.fmc.item
 
 import katze.fmc.ResourceLocation
-import katze.fmc.syntax.all.{*, given}
+import katze.fmc.item.stack.Stack
+import katze.fmc.syntax.all.{ *, given }
 
-final case class Item private[fmc](location: ResourceLocation, maxStackSize : Int :| Positive, maxDamage : Int :| GreaterEqual[0])
+final case class Item private[fmc](
+                                    location: ResourceLocation, 
+                                    maxStackSize : Stack => Int :| Positive, 
+                                    maxDamage : Stack => Int :| GreaterEqual[0]
+                                  )

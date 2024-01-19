@@ -3,10 +3,10 @@ package katze.fmc.block.entity
 import katze.fmc.*
 import katze.fmc.data.*
 
-final case class SharedData[F[_], ServerLevel, T](
-                                       fromWorld : (ServerLevel, BlockPos) => F[Option[T]],
-                                       writeToWorld : (ServerLevel, BlockPos, T) => F[Boolean]
-                                     )
+final case class SharedData[+F[_], -ServerLevel, T](
+                                                    fromWorld : (ServerLevel, BlockPos) => F[Option[T]],
+                                                    writeToWorld : (ServerLevel, BlockPos, T) => F[Boolean]
+                                                    )  
 
 /**
  * Позволяет произвести вычисления над данными блока в мире.
