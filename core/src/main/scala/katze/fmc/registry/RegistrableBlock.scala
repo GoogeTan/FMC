@@ -1,9 +1,7 @@
 package katze.fmc.registry
 
-import katze.fmc.ResourceLocation
-import katze.fmc.block.{ BlockRegistryEntry, BlockPrototype }
-import katze.fmc.block.entity.BlockEntityPrototype
-import katze.fmc.block.state.Property
+import katze.fmc.{ Path, ResourceLocation }
+import katze.fmc.block.{ BlockPrototype, BlockRegistryEntry }
 
 trait RegistrableBlock[F[_], Level]:
   def registerBlock(resourceLocation: ResourceLocation, block : BlockPrototype[F, Level]) : F[BlockRegistryEntry]

@@ -11,5 +11,7 @@ object all:
   export forge.syntax.io.{ *, given }
   export forge.syntax.property.{ *, given }
   export forge.syntax.resource.{ *, given }
+  export forge.syntax.stack.{*, given}
+  export forge.syntax.item.{*, given}
 end all
 

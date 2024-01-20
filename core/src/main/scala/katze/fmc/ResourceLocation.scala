@@ -6,3 +6,5 @@ final case class ResourceLocation(namespace : String :| ResourceNamespace, path 
 
 type ResourcePath = Match["([a-z]|[A-Z]|_|-|\\/)*"]
 type ResourceNamespace = Match["([a-z]|[A-Z]|-)*"]
+type ModId = String :| ResourceNamespace
+type Path = String :| ResourcePath
