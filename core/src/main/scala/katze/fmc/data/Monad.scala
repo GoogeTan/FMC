@@ -20,7 +20,7 @@ extension[F[_] : Monad](value : F[Boolean])
   end ||
   
   def &&(another: F[Boolean]): F[Boolean] =
-    value >>= (x => if (!x) pure(false) else another)
+    value >>= (x => if (!x) pure(false) else another) // TODO
   end &&
   
   def &&(another: Boolean): F[Boolean] =

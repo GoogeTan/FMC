@@ -8,6 +8,7 @@ import katze.fmc.block.state.*
 import katze.fmc.forge.IO
 import net.minecraft.world.level.{ Level, SignalGetter }
 import katze.fmc.forge.syntax.all.{ *, given }
+import katze.fmc.syntax.all.{*, given}
 import katze.fmc.data.*
 
 given redstoneViewImpl: RedstoneView[IO, SignalGetter] with

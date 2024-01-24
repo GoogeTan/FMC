@@ -3,7 +3,7 @@ package katze.fmc.forge.syntax
 import katze.fmc.forge
 
 object all:
-  export katze.fmc.syntax.all.{*, given}
+  //export katze.fmc.syntax.all.{*, given}
   export forge.syntax.block.{ *, given }
   export forge.syntax.blockpos.{ *, given }
   export forge.syntax.blockstate.{ *, given }

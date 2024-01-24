@@ -12,7 +12,7 @@ import katze.fmc.{ BlockPos, Direction }
 
 def pistonBaseBlock[F[_] : Ap, Level](
                                         settings : BlockSettings,
-                                        extendedProperty : Property[Boolean],
+                                        extendedProperty : Property[java.lang.Boolean],
                                         directionProperty : Property[Direction]
                                       ) : BlockPrototype[F, Level] =
   blockPrototype(
@@ -34,7 +34,7 @@ def updatePistonBeingExtended[
                                 level : Level,
                                 pos : BlockPos,
                                 state : BlockState,
-                                extendedProperty : Property[Boolean],
+                                extendedProperty : Property[java.lang.Boolean],
                                 directionProperty : Property[Direction]
                               )(using T : Throws[F, String]) : F[Unit] =
   for
@@ -63,7 +63,7 @@ def tryExtendPiston[
                         level : Level,
                         pos : BlockPos,
                         direction : Direction,
-                        extendedProperty : Property[Boolean]
+                        extendedProperty : Property[java.lang.Boolean]
                       ) : F[Unit] =
   val targetPos = pos.relative(direction)
   for
@@ -98,7 +98,7 @@ def canPistonMoveBlockTowardsDirection[
                                           moveDirection : Direction,
                                           canPistonBreakBlocks : Boolean,
                                           pistonDirection : Direction,
-                                          extendedProperty : Property[Boolean]
+                                          extendedProperty : Property[java.lang.Boolean]
                                         ) : F[Boolean] =
   staysInWorldBounds(level, targetPos, moveDirection)
     && !isMadeOfObsidian(targetsBlockState)
@@ -116,8 +116,8 @@ private def isBlockMovable[F[_] : Monad : PistonBlockTypes : BlockTypes](blockSt
   }
 end isBlockMovable
 
-private def isExtendedPiston[F[_] : Monad : PistonBlockTypes](state : BlockState, extendedProperty : Property[Boolean]) : F[Boolean] =
-  isPistonBlock(state) && valueFromState(state, extendedProperty).getOrElse(false)
+private def isExtendedPiston[F[_] : Monad : PistonBlockTypes](state : BlockState, extendedProperty : Property[java.lang.Boolean]) : F[Boolean] =
+  isPistonBlock(state) && valueFromState(state, extendedProperty).getOrElse(java.lang.Boolean.FALSE)
 end isExtendedPiston
 
 private def staysInWorldBounds[F[_] : Ap, Level : LevelBounds[F, _]](level : Level, pos : BlockPos, pushDirection : Direction) : F[Boolean] =

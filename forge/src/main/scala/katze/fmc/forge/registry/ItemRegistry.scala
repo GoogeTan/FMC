@@ -7,6 +7,7 @@ import katze.fmc.registry.RegistrableItem
 import net.minecraftforge.registries.DeferredRegister
 import net.minecraft.world.item
 import katze.fmc.forge.syntax.all.{*, given}
+import katze.fmc.syntax.all.{*, given}
 
 class ItemRegistry(val registry : ModId => DeferredRegister[item.Item])(using ItemImplementation) extends RegistrableItem[IO]:
   override def registerItem(location: ResourceLocation, prototype: ItemPrototype): IO[Item] =
