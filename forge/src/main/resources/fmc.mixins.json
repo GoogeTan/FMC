@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "katze.fmc.mixin",
+  "package": "katze.fmc.forge.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "fmc.forge.refmap.json",
   "mixins": [
