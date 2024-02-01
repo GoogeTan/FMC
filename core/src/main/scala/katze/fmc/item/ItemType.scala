@@ -2,6 +2,7 @@ package katze.fmc.item
 
 import io.github.iltotore.iron.:|
 import io.github.iltotore.iron.constraint.all.Positive
+import katze.fmc.potion.PotionEffectPattern
 
 enum ItemType:
   case Common(
@@ -14,7 +15,7 @@ enum ItemType:
              isMeat            : Boolean = false,
              canAlwaysEat      : Boolean = false,
              fastFood          : Boolean = false,
-             effects           : List[(Nothing, Float)] = List() // TODO Добавить эффект и его шанс
+             effects           : List[PotionEffectPattern] = List() // TODO Добавить эффект и его шанс
            )
   case Tool(
              toolType     : ToolType,
