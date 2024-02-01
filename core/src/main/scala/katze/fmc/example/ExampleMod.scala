@@ -3,7 +3,7 @@ package katze.fmc.example
 import katze.fmc.block.BlockSettings
 import katze.fmc.{ Direction, Mod, ModId, ResourceLocation }
 import katze.fmc.data.*
-import katze.fmc.registry.*
+import katze.fmc.registry.{ RegistrableBlock, * }
 import katze.fmc.syntax.all.{ *, given }
 import katze.fmc.block.*
 import katze.fmc.block.material.Material
@@ -15,8 +15,8 @@ class ExampleMod[
   ServerLevel <: Level](
                           override val modId: ModId
                         )(using
+                          RegistrableBlock[F, Level],
                           RegistrableBlockEntity[F, Level, ClientLevel, ServerLevel],
-                          RegistrableBlock[F, Level]
                         ) extends Mod[F]:
   private val blocks : List[(ResourceLocation, BlockPrototype[F, Level])] = List(
       ResourceLocation(modId, "piston") -> pistonBaseBlock(
