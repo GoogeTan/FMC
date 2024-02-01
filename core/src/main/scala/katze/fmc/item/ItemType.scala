@@ -18,17 +18,11 @@ enum ItemType:
            )
   case Tool(
              toolType     : ToolType,
-             maxDamage    : Int :| Positive,
-             attackDamage : Float :| Positive,
              attackSpeed  : Float :| Positive,
              material     : ToolMaterial
            )
   case Armor(
               slot: ArmorSlot,
-              material: ArmorMaterial,
-              defense: Int = 0,
-              toughness: Float = 0,
-              knockbackResistance: Float = 0,
-              maxDamage : Int :| Positive
+              material: ArmorMaterial
             )
 end ItemType
