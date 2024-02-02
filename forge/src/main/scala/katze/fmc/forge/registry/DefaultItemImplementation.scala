@@ -9,8 +9,8 @@ import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.Item
 import katze.fmc.forge.syntax.potion.given
 
-class DefaultItemImplementation extends ItemImplementation {
-  override def implementItem(prototype: ItemPrototype): Item = {
+final class DefaultItemImplementation extends ItemImplementation:
+  override def implementItem(prototype: ItemPrototype): Item = 
     val properties = new Item.Properties()
     prototype.itemType match {
       case Common(maxStackSize) =>
@@ -48,5 +48,5 @@ class DefaultItemImplementation extends ItemImplementation {
         properties.durability(material.durabilityForSlot(slot))
     }
     new Item(properties)
-  }
-}
+  end implementItem
+end DefaultItemImplementation

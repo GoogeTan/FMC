@@ -2,4 +2,4 @@ package katze.fmc.potion
 
 import katze.fmc.ResourceLocation
 
-case class PotionEffect(location: ResourceLocation)
+final case class PotionEffect(location: ResourceLocation)
