@@ -1,52 +1,51 @@
 package katze.fmc.forge.registry
 
 import katze.fmc.ResourceLocation
-import katze.fmc.item.ItemPrototype
+import katze.fmc.forge.syntax.potion
 import katze.fmc.item.ItemType.*
+import katze.fmc.item.{ItemPrototype, ItemType}
 import katze.fmc.potion.{PotionEffect, PotionEffectPattern}
 import net.minecraft.world.effect.MobEffectInstance
 import net.minecraft.world.food.FoodProperties
 import net.minecraft.world.item.Item
-import katze.fmc.forge.syntax.potion.given
 
-final class DefaultItemImplementation extends ItemImplementation:
-  override def implementItem(prototype: ItemPrototype): Item = 
-    val properties = new Item.Properties()
-    prototype.itemType match {
-      case Common(maxStackSize) =>
-        properties.stacksTo(maxStackSize)
-
-      case Food(maxStackSize, nutrition, saturationModifier, isMeat, canAlwaysEat, fastFood, effects) =>
-        properties.stacksTo(maxStackSize)
-
-        val foodProperties = new FoodProperties.Builder()
-          .nutrition(nutrition)
-          .saturationMod(saturationModifier)
-
-        if (isMeat) {
-          foodProperties.meat()
-        }
-        if (canAlwaysEat) {
-          foodProperties.alwaysEat()
-        }
-        if (fastFood) {
-          foodProperties.fast()
-        }
-
-        for(PotionEffectPattern(effect, chance, duration, amplifier, isAmbient, isVisible, shouldShowIconInInventory) <- effects) {
-          foodProperties.effect(() => new MobEffectInstance(effect, duration, amplifier, isAmbient, isVisible, shouldShowIconInInventory), chance)
-        }
-
-        properties.food(foodProperties.build())
-
-      case Tool(toolType, attackSpeed, material) =>
-        properties.stacksTo(1)
-        properties.durability(material.durability)
-
-      case Armor(slot, material) =>
-        properties.stacksTo(1)
-        properties.durability(material.durabilityForSlot(slot))
-    }
-    new Item(properties)
+final class DefaultItemImplementation extends ItemImplementation :
+  override def implementItem(prototype: ItemPrototype): Item =
+    new Item(prototype.itemType match {
+      case t: Common => commonProperties(t)
+      case t: Food => foodProperties(t)
+      case t: Tool => toolProperties(t)
+      case t: Armor => armorProperties(t)
+    })
   end implementItem
+
+  def commonProperties(itemType: ItemType.Common): Item.Properties = new Item.Properties().stacksTo(itemType.maxStackSize)
+
+  def foodProperties(itemType: ItemType.Food): Item.Properties =
+    val foodProperties = new FoodProperties.Builder()
+      .nutrition(itemType.nutrition)
+      .saturationMod(itemType.saturationModifier)
+
+    if (itemType.isMeat) {
+      foodProperties.meat()
+    }
+    if (itemType.canAlwaysEat) {
+      foodProperties.alwaysEat()
+    }
+    if (itemType.fastFood) {
+      foodProperties.fast()
+    }
+
+    for (PotionEffectPattern(effect, chance, duration, amplifier, isAmbient, isVisible, shouldShowIconInInventory) <- itemType.effects) {
+      foodProperties.effect(() => new MobEffectInstance(effect, duration, amplifier, isAmbient, isVisible, shouldShowIconInInventory), chance)
+    }
+
+    new Item.Properties().stacksTo(itemType.maxStackSize).food(foodProperties.build())
+  end foodProperties
+
+
+  def toolProperties(itemType: ItemType.Tool): Item.Properties = new Item.Properties().stacksTo(1).durability(itemType.material.durability)
+
+  def armorProperties(itemType: ItemType.Armor): Item.Properties = new Item.Properties().stacksTo(1).durability(itemType.material.durabilityForSlot(slot))
+
 end DefaultItemImplementation
