@@ -19,7 +19,7 @@ buildscript {
 plugins {
     id 'eclipse'
     id 'idea'
-    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+    id 'net.minecraftforge.gradle' version '6.0.20'
     id 'scala'
 }
 apply plugin: 'com.github.johnrengelman.shadow'
